@@ -1,0 +1,79 @@
+:root {
+    --chicago-red: #E4002B;
+    --chicago-blue: #41B6E6;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 3%;
+    background-color: var(--chicago-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-links a{
+    font-size: 1.3rem;
+    color: white;
+    margin-left: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-links a:hover {
+    border-bottom: 3px solid var(--chicago-red);
+    color: var(--chicago-red);
+}
+
+.banner {
+    margin-top: 110px;
+    width: 100%;
+    background:
+    linear-gradient(
+        to right,
+        white 0%,
+        rgba(255,255,255, 0.9) 30%,
+        rgba(255,255,255, 0.3) 60%,
+        transparent 80%
+    ),
+    url("Visualizations/chicago-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 1%;
+}
+

@@ -1,0 +1,489 @@
+{
+  "courses": [
+    {
+      "course_code": "ENGL 160",
+      "course_title": "Academic Writing I: Writing in Academic and Public Contexts",
+      "credit_hours": 3,
+      "description": "Students write in a variety of genres with an emphasis on argument and sentence-level grammar. Topics vary by section.",
+      "course_information": "Extensive computer use required. This class may be taught in an online format. When that is the case, internet access will be required. A high-speed connection is strongly suggested. Please check the online class schedule for online sections. Prerequisite(s): Eligibility as determined by performance on the Department placement test. Class Schedule Information: Course descriptions for composition courses are available at the First-Year Writing Program website: http://www.uic.edu/depts/engl/programs/1styearwriting/. IAI GECC Writing course.",
+      "prerequisites": {
+        "non_course_requirements": [
+          "Eligibility as determined by performance on the Department placement test"
+        ]
+      },
+      "registration_information": "Course descriptions for composition courses are available at the First-Year Writing Program website: http://www.uic.edu/depts/engl/programs/1styearwriting/."
+    },
+    {
+      "course_code": "ENGL 161",
+      "course_title": "Academic Writing II: Writing for Inquiry and Research",
+      "credit_hours": 3,
+      "description": "Students learn about academic inquiry and complete several writing projects including a documented research paper. Topics vary by section.",
+      "course_information": "Extensive computer use required. This class may be taught in an online format. When that is the case, internet access will be required. A high-speed connection is strongly suggested. Prerequisite(s): ENGL 160 or the equivalent. All students take the Writing Placement test except for those with test-based exemptions noted here. If students place into ENGL 060, ENGL 070, ENGL 071, and ENGL 160, the student must take the course (or courses) prior to enrolling in ENGL 161. Students with an ACT English subscore of 27 or higher, SAT Evidence-Based Critical Reading score of 630 or higher, AP English Language & Composition score of 3 or higher, or IB English Language A: Language & Literature score of 6 or higher, receive credit for ENGL 160 and permission to enroll in ENGL 161. Class Schedule Information: Students may register for any section. Course descriptions for composition courses are available at the First-Year Writing Program website: http://www.uic.edu/depts/engl/programs/1styearwriting/. IAI GECC Writing course.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "ENGL 160",
+                "course_title": "Academic Writing I: Writing in Academic and Public Contexts",
+                "description": "Students write in a variety of genres with an emphasis on argument and sentence-level grammar. Topics vary by section."
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "or the equivalent",
+          "All students take the Writing Placement test except for those with test-based exemptions",
+          "Students with an ACT English subscore of 27 or higher, SAT Evidence-Based Critical Reading score of 630 or higher, AP English Language & Composition score of 3 or higher, or IB English Language A: Language & Literature score of 6 or higher, receive credit for ENGL 160 and permission to enroll in ENGL 161"
+        ]
+      },
+      "registration_information": "Students may register for any section. Course descriptions for composition courses are available at the First-Year Writing Program website: http://www.uic.edu/depts/engl/programs/1styearwriting/."
+    },
+    {
+      "course_code": "MATH 180",
+      "course_title": "Calculus I",
+      "credit_hours": 4,
+      "description": "Differentiation, curve sketching, maximum-minimum problems, related rates, mean-value theorem, antiderivative, Riemann integral, logarithm, and exponential functions.",
+      "course_information": "Prior credit in MATH 165 or MATH 170 will be lost with subsequent completion of MATH 180. Prerequisite(s): Grade of C or better in MATH 121 or appropriate performance on the department placement test. Class Schedule Information: To be properly registered, students must enroll in one Discussion/Recitation and one Lecture. IAI Major MTH course, and IAI GECC Mathematics course, and UIC GE Natural World No Lab course.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "MATH 121",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "or appropriate performance on the department placement test"
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Discussion/Recitation and one Lecture."
+    },
+    {
+      "course_code": "MATH 181",
+      "course_title": "Calculus II",
+      "credit_hours": 4,
+      "description": "Techniques of integration, arc length, solids of revolution, applications, polar coordinates, parametric equations, infinite sequences and series, power series.",
+      "course_information": "Prerequisite(s): Grade of C or better in MATH 180. Class Schedule Information: To be properly registered, students must enroll in one Discussion/Recitation and one Lecture. IAI Major MTH course, and IAI GECC Mathematics course, and UIC GE Natural World No Lab course.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "MATH 180",
+                "course_title": "Calculus I",
+                "description": "Differentiation, curve sketching, maximum-minimum problems, related rates, mean-value theorem, antiderivative, Riemann integral, logarithm, and exponential functions.",
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Discussion/Recitation and one Lecture."
+    },
+    {
+      "course_code": "MATH 210",
+      "course_title": "Calculus III",
+      "credit_hours": 3,
+      "description": "Vectors in space, functions of several variables, partial differential and optimization, multiple integrals, vector fields, Green’s Theorem, Stokes Theorem.",
+      "course_information": "Prerequisite(s): Grade of C or better in MATH 181. Class Schedule Information: To be properly registered, students must enroll in one Discussion and one Lecture. IAI Major MTH course, and IAI GECC Mathematics course, and UIC GE Natural World No Lab course.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "MATH 181",
+                "course_title": "Calculus II",
+                "description": "Techniques of integration, arc length, solids of revolution, applications, polar coordinates, parametric equations, infinite sequences and series, power series.",
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Discussion and one Lecture."
+    },
+    {
+      "course_code": "BIOS 110",
+      "course_title": "Biology of Cells and Organisms",
+      "credit_hours": 4,
+      "description": "Introductory biology at the molecular, cellular, and organismal level. Topics include: Scientific skills, biological chemistry, cell structure and function, metabolism, cell division, molecular genetics, diversity, anatomy and physiology.",
+      "course_information": "Previously listed as BIOS 100. Animals used in instruction. THIS COURSE IS INTENDED FOR SCIENCE MAJORS. BIOS 110 and BIOS 120 may be taken in any order. Credit is not given for BIOS 110 if the student has credit in BIOS 100. Credit is not given for BIOS 104 if the student has credit in BIOS 100, BIOS 101, BIOS 110 or BIOS 120. Class Schedule Information: To be properly registered, students must enroll in one Lecture and one Laboratory-Discussion. IAI Major BIO course, and IAI GECC Life Sci-w/Lab course, and UIC GE Natural World Lab course.",
+      "prerequisites": null,
+      "registration_information": "To be properly registered, students must enroll in one Lecture and one Laboratory-Discussion."
+    },
+    {
+      "course_code": "BIOS 120",
+      "course_title": "Biology of Populations and Communities",
+      "credit_hours": 4,
+      "description": "Introductory biology at the level of populations and communities. Topics include: Scientific skills, evolution, Mendelian and population genetics, biological diversity, and ecological systems including ecosystem processes and human impacts.",
+      "course_information": "Previously listed as BIOS 101. Animals used in instruction. This course is intended for science majors. BIOS 110 and BIOS 120 may be taken in any order. Credit is not given for BIOS 120 if the student has credit in BIOS 101. Credit is not given for BIOS 104 if the student has credit in BIOS 100, BIOS 101, BIOS 110 or BIOS 120. Class Schedule Information: To be properly registered, students must enroll in one Lecture-Discussion and one Laboratory-Discussion. IAI Major BIO course, and IAI GECC Life Sci-w/Lab course, and UIC GE Natural World Lab course.",
+      "prerequisites": null,
+      "registration_information": "To be properly registered, students must enroll in one Lecture-Discussion and one Laboratory-Discussion."
+    },
+    {
+      "course_code": "CHEM 122",
+      "course_title": "Matter and Energy",
+      "credit_hours": 3,
+      "description": "An introductory one-semester course in chemical principles, including the quantum model of the atom, periodicity, bonding, reaction types, solutions, stoichiometry, thermochemistry, intermolecular forces, chemical equilibrium, acid-base equilibria.",
+      "course_information": "Credit is not given for CHEM 122 if the student has a C or better in CHEM 112 or a C or better in CHEM 116. Students should complete CHEM 123 within a semester of completing CHEM 122. Prerequisite(s): Grade of C or better in CHEM 101 or appropriate score on the department placement test. Class Schedule Information: To be properly registered, students must enroll in one Discussion and one Lecture. IAI Major CHM when Lec+Lab course, and IAI GECC PhySci when Lec+Lab course, and UIC GE Natural World No Lab course.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CHEM 101",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "or appropriate score on the department placement test"
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Discussion and one Lecture. Students should complete CHEM 123 within a semester of completing CHEM 122."
+    },
+    {
+      "course_code": "CHEM 123",
+      "course_title": "Foundations of Chemical Inquiry I",
+      "credit_hours": 2,
+      "description": "Laboratory in general chemistry, including the quantum model of the atom, stoichiometry, periodicity, reaction types, intermolecular forces, and pH.",
+      "course_information": "Credit is not given for CHEM 123 if the student has a C or better in CHEM 112 or a C or better in CHEM 116. Students should complete CHEM 123 within one semester of completing CHEM 122. Prerequisite(s): Grade of C or better in CHEM 101; and concurrent registration or Grade of C or better in CHEM 122. Class Schedule Information: To be properly registered, students must enroll in one Laboratory and one Discussion. IAI Major CHM when Lec+Lab course, and IAI GECC PhySci when Lec+Lab course, and UIC GE Natural World Lab course.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CHEM 101",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CHEM 122",
+                "course_title": "Matter and Energy",
+                "description": "An introductory one-semester course in chemical principles, including the quantum model of the atom, periodicity, bonding, reaction types, solutions, stoichiometry, thermochemistry, intermolecular forces, chemical equilibrium, acid-base equilibria.",
+                "minimum_grade": "C",
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Laboratory and one Discussion. Students should complete CHEM 123 within one semester of completing CHEM 122."
+    },
+    {
+      "course_code": "CHEM 116",
+      "course_title": "Honors and Majors General and Analytical Chemistry I",
+      "credit_hours": 5,
+      "description": "General and analytical chemistry with laboratory. Coverage of the fundamentals of chemistry including stoichiometry and equilibrium. Coverage of the principles of analytical chemistry, including the use of instrumentation.",
+      "course_information": "Credit is not given for CHEM 116 if the student has credit in CHEM 112 or CHEM 122 and CHEM 123. Prerequisite(s): Superior performance on the UIC chemistry placement examination. Class Schedule Information: To be properly registered, students must enroll in one Laboratory, one Lecture and one Quiz. UIC GE Natural World Lab course.",
+      "prerequisites": {
+        "non_course_requirements": [
+          "Superior performance on the UIC chemistry placement examination"
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Laboratory, one Lecture and one Quiz."
+    },
+    {
+      "course_code": "CHEM 124",
+      "course_title": "Chemical Dynamics",
+      "credit_hours": 3,
+      "description": "A second semester course in chemical principles including chemical thermodynamics, phase transitions, spontaneity/equilibrium, electrochemistry, kinetics, bonding, molecular spectroscopy, coordination compounds, and buffer solutions.",
+      "course_information": "Credit is not given for CHEM 124 if the student has a grade of C or better in CHEM 114 or CHEM 118. Students should complete CHEM 125 within a semester of completing CHEM 124. Prerequisite(s): Grade of C or better in CHEM 116; or Grade of C or better in CHEM 122 and Grade of C or better or concurrent registration in CHEM 123; or Grade of B or better in CHEM 115 and department consent. Class Schedule Information: To be properly registered, students must enroll in one Discussion and one Lecture. IAI Major CHM when Lec+Lab course, and UIC GE Natural World No Lab course.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CHEM 116",
+                "course_title": "Honors and Majors General and Analytical Chemistry I",
+                "description": "General and analytical chemistry with laboratory. Coverage of the fundamentals of chemistry including stoichiometry and equilibrium. Coverage of the principles of analytical chemistry, including the use of instrumentation.",
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CHEM 122",
+                "course_title": "Matter and Energy",
+                "description": "An introductory one-semester course in chemical principles, including the quantum model of the atom, periodicity, bonding, reaction types, solutions, stoichiometry, thermochemistry, intermolecular forces, chemical equilibrium, acid-base equilibria.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CHEM 123",
+                "course_title": "Foundations of Chemical Inquiry I",
+                "description": "Laboratory in general chemistry, including the quantum model of the atom, stoichiometry, periodicity, reaction types, intermolecular forces, and pH.",
+                "minimum_grade": "C",
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CHEM 115",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "B"
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "or Grade of B or better in CHEM 115 and department consent"
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Discussion and one Lecture. Students should complete CHEM 125 within a semester of completing CHEM 124."
+    },
+    {
+      "course_code": "CHEM 125",
+      "course_title": "Foundations of Chemical Inquiry II",
+      "credit_hours": 2,
+      "description": "Laboratory in general chemistry including chemical thermodynamics, spontaneity, chemical equilibrium, acid-base equilibrium, electrochemistry, kinetics, bonding, order/symmetry in condensed phases, coordination compounds, and spectroscopy.",
+      "course_information": "Credit is not given for CHEM 125 if the student has a grade of C or better in CHEM 114 or CHEM 118. Students should complete CHEM 125 within one semester of completing CHEM 124. Prerequisite(s): Grade of C or better in CHEM 116; or Grade of C or better in CHEM 122 and Grade of C or better in CHEM 123; or Grade of B or better in CHEM 115 and department consent; and Grade of C or better or concurrent registration in CHEM 124. IAI Major CHM when Lec+Lab course, and UIC GE Natural World Lab course.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CHEM 116",
+                "course_title": "Honors and Majors General and Analytical Chemistry I",
+                "description": "General and analytical chemistry with laboratory. Coverage of the fundamentals of chemistry including stoichiometry and equilibrium. Coverage of the principles of analytical chemistry, including the use of instrumentation.",
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CHEM 122",
+                "course_title": "Matter and Energy",
+                "description": "An introductory one-semester course in chemical principles, including the quantum model of the atom, periodicity, bonding, reaction types, solutions, stoichiometry, thermochemistry, intermolecular forces, chemical equilibrium, acid-base equilibria.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CHEM 123",
+                "course_title": "Foundations of Chemical Inquiry I",
+                "description": "Laboratory in general chemistry, including the quantum model of the atom, stoichiometry, periodicity, reaction types, intermolecular forces, and pH.",
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CHEM 115",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "B"
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CHEM 124",
+                "course_title": "Chemical Dynamics",
+                "description": "A second semester course in chemical principles including chemical thermodynamics, phase transitions, spontaneity/equilibrium, electrochemistry, kinetics, bonding, molecular spectroscopy, coordination compounds, and buffer solutions.",
+                "minimum_grade": "C",
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "or Grade of B or better in CHEM 115 and department consent"
+        ]
+      },
+      "registration_information": "Students should complete CHEM 125 within one semester of completing CHEM 124."
+    },
+    {
+      "course_code": "CHEM 118",
+      "course_title": "Honors and Majors General and Analytical Chemistry II",
+      "credit_hours": 5,
+      "description": "General and analytical chemistry with laboratory. Coverage of the fundamentals of chemistry including atomic and molecular structure, thermodynamics, and kinetics. Coverage of principles of analytical chemistry, including the use of instrumentation.",
+      "course_information": "Credit is not given for CHEM 118 if the student has credit in CHEM 114 or CHEM 124 and CHEM 125. Prerequisite(s): Grade of C or better in CHEM 116. Class Schedule Information: To be properly registered, students must enroll in one Laboratory, one Lecture and one Quiz. UIC GE Natural World Lab course.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CHEM 116",
+                "course_title": "Honors and Majors General and Analytical Chemistry I",
+                "description": "General and analytical chemistry with laboratory. Coverage of the fundamentals of chemistry including stoichiometry and equilibrium. Coverage of the principles of analytical chemistry, including the use of instrumentation.",
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Laboratory, one Lecture and one Quiz."
+    },
+    {
+      "course_code": "PHYS 141",
+      "course_title": "General Physics I (Mechanics)",
+      "credit_hours": 4,
+      "description": "Kinematics, vectors, Newton’s laws of motion; linear momentum, collisions; work and kinetic energy; potential energy, conservation of energy; rotational kinematics and energy; rotational dynamics, static equilibrium; simple harmonic motion.",
+      "course_information": "Students may obtain one additional hour of credit by concurrently registering in PHYS 144. Prerequisite(s): Grade of C or better or concurrent registration in MATH 180; or approval of the department ; and Grade of C or better in PHYS 100 or adequate performance on the departmental placement test. Class Schedule Information: During the fall and spring terms, combined-section final exam will be held on Wednesday of finals week from 6 to 8 p.m. To be properly registered, students must enroll in one Laboratory and one Lecture-Discussion. IAI Major PHY course, and IAI GECC Phys Sci-w/Lab course, and UIC GE Natural World Lab course.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "MATH 180",
+                "course_title": "Calculus I",
+                "description": "Differentiation, curve sketching, maximum-minimum problems, related rates, mean-value theorem, antiderivative, Riemann integral, logarithm, and exponential functions.",
+                "minimum_grade": "C",
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          },
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "PHYS 100",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "or approval of the department",
+          "or adequate performance on the departmental placement test"
+        ]
+      },
+      "registration_information": "During the fall and spring terms, combined-section final exam will be held on Wednesday of finals week from 6 to 8 p.m. To be properly registered, students must enroll in one Laboratory and one Lecture-Discussion."
+    },
+    {
+      "course_code": "PHYS 142",
+      "course_title": "General Physics II (Electricity and Magnetism)",
+      "credit_hours": 4,
+      "description": "Electrostatics; electric currents; d-c circuits; magnetic fields; magnetic media; electromagnetic induction; a-c circuits; Maxwell’s equations; electromagnetic waves; reflection and refraction; interference; geometrical optics.",
+      "course_information": "Prerequisite(s): Grade of C or better in PHYS 141; and Grade of C or better or concurrent registration in MATH 181. IAI Major PHY course, and UIC GE Natural World Lab course.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "PHYS 141",
+                "course_title": "General Physics I (Mechanics)",
+                "description": "Kinematics, vectors, Newton’s laws of motion; linear momentum, collisions; work and kinetic energy; potential energy, conservation of energy; rotational kinematics and energy; rotational dynamics, static equilibrium; simple harmonic motion.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "MATH 181",
+                "course_title": "Calculus II",
+                "description": "Techniques of integration, arc length, solids of revolution, applications, polar coordinates, parametric equations, infinite sequences and series, power series.",
+                "minimum_grade": "C",
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "EAES 101",
+      "course_title": "Global Environmental Change",
+      "credit_hours": 4,
+      "description": "Natural and anthropogenic controls on the structure and evolution of the earth's surface environment. Interactions among the Earth's solid surface, hydrosphere, atmosphere, and biosphere and human impacts on these processes.",
+      "course_information": "Field trip required at nominal fee. Class Schedule Information: To be properly registered, students must enroll in one Laboratory and one Lecture. UIC GE Natural World Lab course.",
+      "prerequisites": null,
+      "registration_information": "To be properly registered, students must enroll in one Laboratory and one Lecture. Field trip required at nominal fee."
+    },
+    {
+      "course_code": "EAES 111",
+      "course_title": "Earth, Energy, and the Environment",
+      "credit_hours": 4,
+      "description": "Nature and evolution of Earth from the scale of minerals and rocks to tectonic plates. Earthquakes and volcanoes, their hazards and effects on humans. Natural resources, sources of energy, and their environmental impacts.",
+      "course_information": "Previously listed as EAES 102. Field trip required at nominal fee. Class Schedule Information: To be properly registered, students must enroll in one Laboratory and one Lecture. UIC GE Natural World Lab course.",
+      "prerequisites": null,
+      "registration_information": "To be properly registered, students must enroll in one Laboratory and one Lecture. Field trip required at nominal fee."
+    }
+  ],
+  "science_electives": {
+    "description": "Select two of the following (total 8 hours)",
+    "options": [
+      {
+        "course_code": "BIOS 110",
+        "course_title": "Biology of Cells and Organisms"
+      },
+      {
+        "course_code": "BIOS 120",
+        "course_title": "Biology of Populations and Communities"
+      },
+      {
+        "course_codes": ["CHEM 122", "CHEM 123"],
+        "course_title": "Matter and Energy and Foundations of Chemical Inquiry I",
+        "note": "or CHEM 116 Honors and Majors General and Analytical Chemistry I"
+      },
+      {
+        "course_code": "CHEM 116",
+        "course_title": "Honors and Majors General and Analytical Chemistry I"
+      },
+      {
+        "course_codes": ["CHEM 124", "CHEM 125"],
+        "course_title": "Chemical Dynamics and Foundations of Chemical Inquiry II",
+        "note": "or CHEM 118 Honors and Majors General and Analytical Chemistry II"
+      },
+      {
+        "course_code": "CHEM 118",
+        "course_title": "Honors and Majors General and Analytical Chemistry II"
+      },
+      {
+        "course_code": "PHYS 141",
+        "course_title": "General Physics I (Mechanics)"
+      },
+      {
+        "course_code": "PHYS 142",
+        "course_title": "General Physics II (Electricity and Magnetism)"
+      },
+      {
+        "course_code": "EAES 101",
+        "course_title": "Global Environmental Change"
+      },
+      {
+        "course_code": "EAES 111",
+        "course_title": "Earth, Energy, and the Environment"
+      }
+    ]
+  },
+  "data_notes": [
+    "Prerequisite groups preserve AND/OR relationships. Within a group, condition 'all_of' means every listed item is required; 'any_of' means one listed item is sufficient.",
+    "Prerequisite course titles and descriptions are included when they were available in the supplied text. Values are null when the supplied text did not include that course's title or description.",
+    "Credit or concurrent registration is represented with credit_or_concurrent_registration: true.",
+    "Non-course conditions such as class standing, admission, placement tests, or department approval are stored in prerequisites.non_course_requirements.",
+    "Credit hours are stored as a number when only one value is given.",
+    "Science electives section reflects the requirement to select two courses (8 hours total) from the listed options, including paired lecture+lab combinations."
+  ]
+}

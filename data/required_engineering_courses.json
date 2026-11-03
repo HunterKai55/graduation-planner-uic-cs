@@ -1,0 +1,580 @@
+{
+  "catalog": "UIC College of Engineering — Required Courses",
+  "courses": [
+    {
+      "course_code": "ENGR 100",
+      "course_title": "Engineering Success Seminar for Freshmen",
+      "credit_hours": 1,
+      "description": "A general orientation course on skills pertinent to students for successful completion of their undergraduate degree.",
+      "course_information": "Satisfactory/Unsatisfactory grading only. No graduation credit. Should be taken within the first semester after enrolling in the College of Engineering.",
+      "prerequisites": {
+        "non_course_requirements": [
+          "Admission to the College of Engineering",
+          "Degree-seeking students only"
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "ENGR 101",
+      "course_title": "Engineering Success Seminar for Transfer Students",
+      "credit_hours": 1,
+      "description": "A general orientation course on skills pertinent to students for successful completion of their undergraduate degree.",
+      "course_information": "Satisfactory/Unsatisfactory grading only. No graduation credit. Should be taken within the first semester after enrolling in the College of Engineering.",
+      "prerequisites": {
+        "non_course_requirements": [
+          "Degree-seeking transfer students only"
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 111",
+      "course_title": "Program Design I",
+      "credit_hours": 3,
+      "description": "Introduction to programming: control structures; variables and data types; problem decomposition and procedural programming; input and output; aggregate data structures including arrays; programming exercises.",
+      "course_information": "3 hours. Extensive computer use required. Credit is not given for CS 111 if the student has credit in CS 107, CS 109, CS 112, CS 113, MCS 160, or MCS 260.",
+      "prerequisites": {},
+      "registration_information": "To be properly registered, students must enroll in one Laboratory and one Lecture-Discussion."
+    },
+    {
+      "course_code": "CS 112",
+      "course_title": "Program Design I in the Context of Biological Problems",
+      "credit_hours": 3,
+      "description": "Introduction to programming using Biology as the context for programming in a high-level language; control structures, variables, simple and aggregate data types; problem-solving techniques; biology topics include central dogma and genetics.",
+      "course_information": "Same as BIOS 112. Credit is not given for CS 112 if the student has credit in CS 107, CS 109, CS 111, CS 113, MCS 160, or MCS 260.",
+      "prerequisites": {},
+      "registration_information": "To be properly registered, students must enroll in one Laboratory and one Lecture-Discussion."
+    },
+    {
+      "course_code": "CS 113",
+      "course_title": "Program Design I in the Context of Law and Public Policy",
+      "credit_hours": 3,
+      "description": "Introduction to programming using law and public policy as the context for programming; control structures, variables, simple and aggregate data types; problem-solving techniques; legal topics: security, privacy, encryption, and predictive policing.",
+      "course_information": "Credit is not given for CS 113 if the student has credit in CS 107, CS 109, CS 111, CS 112, MCS 160, or MCS 260.",
+      "prerequisites": {},
+      "registration_information": "To be properly registered, students must enroll in one Laboratory and one Lecture-Discussion."
+    },
+    {
+      "course_code": "CS 141",
+      "course_title": "Program Design II",
+      "credit_hours": 3,
+      "description": "Data abstraction and modular design; recursion; lists and stacks; dynamic memory allocation; file manipulation; programming exercises.",
+      "course_information": "3 hours. Previously listed as CS 102. Extensive computer use required.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 111",
+                "course_title": "Program Design I",
+                "description": "Introduction to programming: control structures; variables and data types; problem decomposition and procedural programming; input and output; aggregate data structures including arrays; programming exercises.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 112",
+                "course_title": "Program Design I in the Context of Biological Problems",
+                "description": "Introduction to programming using Biology as the context for programming in a high-level language; control structures, variables, simple and aggregate data types; problem-solving techniques; biology topics include central dogma and genetics.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 113",
+                "course_title": "Program Design I in the Context of Law and Public Policy",
+                "description": "Introduction to programming using law and public policy as the context for programming; control structures, variables, simple and aggregate data types; problem-solving techniques; legal topics: security, privacy, encryption, and predictive policing.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 107",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 109",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "MATH 180",
+                "course_title": null,
+                "description": null,
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Laboratory-Discussion and one Lecture-Discussion."
+    },
+    {
+      "course_code": "CS 151",
+      "course_title": "Mathematical Foundations of Computing",
+      "credit_hours": 3,
+      "description": "Discrete mathematics concepts fundamental to computing: propositional logic, predicates and quantifiers; proofs; sets; recursive definitions and induction; functions, relations and graphs; combinatorics and discrete probability; applications.",
+      "course_information": "3 hours. Credit is not given for CS 151 if the student has credit in MCS 361. A grade of C in MCS 260 (the prior course number for MCS 160) is also considered a valid prerequisite replacement for MCS 160.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 111",
+                "course_title": "Program Design I",
+                "description": "Introduction to programming: control structures; variables and data types; problem decomposition and procedural programming; input and output; aggregate data structures including arrays; programming exercises.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 112",
+                "course_title": "Program Design I in the Context of Biological Problems",
+                "description": "Introduction to programming using Biology as the context for programming in a high-level language; control structures, variables, simple and aggregate data types; problem-solving techniques; biology topics include central dogma and genetics.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 113",
+                "course_title": "Program Design I in the Context of Law and Public Policy",
+                "description": "Introduction to programming using law and public policy as the context for programming; control structures, variables, simple and aggregate data types; problem-solving techniques; legal topics: security, privacy, encryption, and predictive policing.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 107",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 109",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "MCS 160",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "MATH 180",
+                "course_title": null,
+                "description": null,
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          },
+          {
+            "condition": "alternative_path",
+            "courses": [
+              {
+                "course_code": null,
+                "course_title": "Department placement test",
+                "description": "An appropriate score on the department placement test.",
+                "minimum_grade": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Lecture and one Discussion."
+    },
+    {
+      "course_code": "CS 211",
+      "course_title": "Programming Practicum",
+      "credit_hours": 3,
+      "description": "Software development tools and practices; debugging and testing; advanced language features; standard libraries; code management.",
+      "course_information": "2 hours. Extensive computer use required.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 141",
+                "course_title": "Program Design II",
+                "description": "Data abstraction and modular design; recursion; lists and stacks; dynamic memory allocation; file manipulation; programming exercises.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 107",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C",
+                "restriction": "This alternative is only for Computer Engineering majors or students doing a Computer Engineering minor."
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Lecture-Discussion and one Laboratory-Discussion."
+    },
+    {
+      "course_code": "CS 251",
+      "course_title": "Data Structures",
+      "credit_hours": 4,
+      "description": "Design, usage and analysis of data structures: review of lists, stacks and queues; hash tables, priority queues, search trees, introduction to graphs; searching and sorting; runtime analysis; programming projects and lab exercises.",
+      "course_information": "4 hours.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 141",
+                "course_title": "Program Design II",
+                "description": "Data abstraction and modular design; recursion; lists and stacks; dynamic memory allocation; file manipulation; programming exercises.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 107",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 151",
+                "course_title": "Mathematical Foundations of Computing",
+                "description": "Discrete mathematics concepts fundamental to computing: propositional logic, predicates and quantifiers; proofs; sets; recursive definitions and induction; functions, relations and graphs; combinatorics and discrete probability; applications.",
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 211",
+                "course_title": "Programming Practicum",
+                "description": "Software development tools and practices; debugging and testing; advanced language features; standard libraries; code management.",
+                "credit_or_concurrent_registration": true
+              },
+              {
+                "course_code": "ECE 266",
+                "course_title": null,
+                "description": null,
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Lecture-Discussion and one Laboratory."
+    },
+    {
+      "course_code": "CS 261",
+      "course_title": "Machine Organization",
+      "credit_hours": 4,
+      "description": "Data representation and computer arithmetic; machine language; addressing; memory hierarchy; subroutines; data structures; processor architecture: hardware components, pipelining.",
+      "course_information": "Credit is not given for CS 261 if the student has credit for ECE 267 or ECE 366. Extensive computer use required.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 141",
+                "course_title": "Program Design II",
+                "description": "Data abstraction and modular design; recursion; lists and stacks; dynamic memory allocation; file manipulation; programming exercises.",
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 211",
+                "course_title": "Programming Practicum",
+                "description": "Software development tools and practices; debugging and testing; advanced language features; standard libraries; code management.",
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Lecture-Discussion and one Laboratory."
+    },
+    {
+      "course_code": "CS 277",
+      "course_title": "Technical and Professional Communication in Computer Science",
+      "credit_hours": 3,
+      "description": "Communication skills for computing students and professionals in various contexts: technical writing, portfolios, job interviews, demos, sales, with speech organization, visuals, and delivery. Attendance, participation, and presentations required.",
+      "course_information": null,
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 141",
+                "course_title": "Program Design II",
+                "description": "Data abstraction and modular design; recursion; lists and stacks; dynamic memory allocation; file manipulation; programming exercises."
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Lecture-Discussion and one Discussion."
+    },
+    {
+      "course_code": "CS 301",
+      "course_title": "Languages and Automata",
+      "credit_hours": 3,
+      "description": "Regular sets and finite automata. Context-free languages and push-down automata. Parsing. Computability theory including Turing machines and decidability.",
+      "course_information": "Previously listed as EECS 361.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 151",
+                "course_title": "Mathematical Foundations of Computing",
+                "description": "Discrete mathematics concepts fundamental to computing: propositional logic, predicates and quantifiers; proofs; sets; recursive definitions and induction; functions, relations and graphs; combinatorics and discrete probability; applications.",
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": "Data Structures",
+                "description": "Design, usage and analysis of data structures: review of lists, stacks and queues; hash tables, priority queues, search trees, introduction to graphs; searching and sorting; runtime analysis; programming projects and lab exercises.",
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Discussion/Recitation and one Lecture."
+    },
+    {
+      "course_code": "CS 341",
+      "course_title": "Programming Language Design and Implementation",
+      "credit_hours": 3,
+      "description": "Programming language paradigms, design and implementation: syntax and semantics; parsing; runtime systems; control; data types; subroutines and exceptions; data and procedural abstraction; functional programming.",
+      "course_information": "Extensive computer use required.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 211",
+                "course_title": "Programming Practicum",
+                "description": "Software development tools and practices; debugging and testing; advanced language features; standard libraries; code management.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 251",
+                "course_title": "Data Structures",
+                "description": "Design, usage and analysis of data structures: review of lists, stacks and queues; hash tables, priority queues, search trees, introduction to graphs; searching and sorting; runtime analysis; programming projects and lab exercises.",
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 342",
+      "course_title": "Software Design",
+      "credit_hours": 3,
+      "description": "Software design principles and practices: Object-oriented design; design patterns; software reuse; testing; event driven programming and concurrency; graphical user interface design and development; Team development.",
+      "course_information": "Extensive computer use required. Credit is not given for CS 342 if the student has credit for CS 340.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": "Data Structures",
+                "description": "Design, usage and analysis of data structures: review of lists, stacks and queues; hash tables, priority queues, search trees, introduction to graphs; searching and sorting; runtime analysis; programming projects and lab exercises.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 211",
+                "course_title": "Programming Practicum",
+                "description": "Software development tools and practices; debugging and testing; advanced language features; standard libraries; code management.",
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 361",
+      "course_title": "Systems Programming",
+      "credit_hours": 4,
+      "description": "Study of computer systems emphasizing impact on application level programming. Virtual memory and memory management; code optimization; system-level I/O; concurrency: processes, threads, synchronization; introduction to network programming.",
+      "course_information": "Extensive computer use required.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": "Data Structures",
+                "description": "Design, usage and analysis of data structures: review of lists, stacks and queues; hash tables, priority queues, search trees, introduction to graphs; searching and sorting; runtime analysis; programming projects and lab exercises.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 211",
+                "course_title": "Programming Practicum",
+                "description": "Software development tools and practices; debugging and testing; advanced language features; standard libraries; code management.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 261",
+                "course_title": "Machine Organization",
+                "description": "Data representation and computer arithmetic; machine language; addressing; memory hierarchy; subroutines; data structures; processor architecture: hardware components, pipelining."
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Lecture-Discussion and one Laboratory."
+    },
+    {
+      "course_code": "CS 362",
+      "course_title": "Computer Design",
+      "credit_hours": 4,
+      "description": "Computer hardware building blocks. logic gates; combinational circuits; arithmetic circuits; flip flops and sequential circuits; registers and memory; CPU design; I/O design.",
+      "course_information": "3 hours. Extensive computer use required. Credit is not given for CS 362 if the student has credit in ECE 265.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 211",
+                "course_title": "Programming Practicum",
+                "description": "Software development tools and practices; debugging and testing; advanced language features; standard libraries; code management.",
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 261",
+                "course_title": "Machine Organization",
+                "description": "Data representation and computer arithmetic; machine language; addressing; memory hierarchy; subroutines; data structures; processor architecture: hardware components, pipelining."
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Lecture-Discussion and one Laboratory."
+    },
+    {
+      "course_code": "CS 377",
+      "course_title": "Ethical Issues in Computing",
+      "credit_hours": 3,
+      "description": "Ethical and social issues in computing: privacy and surveillance, social media and society, technology and economic inequality, technology-related intellectual property law, professional ethics.",
+      "course_information": "Extensive computer use required.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 277",
+                "course_title": "Technical and Professional Communication in Computer Science",
+                "description": "Communication skills for computing students and professionals in various contexts: technical writing, portfolios, job interviews, demos, sales, with speech organization, visuals, and delivery."
+              },
+              {
+                "course_code": "DEPARTMENT APPROVAL",
+                "course_title": "Department approval",
+                "description": "Approval of the department."
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": "Data Structures",
+                "description": "Design, usage and analysis of data structures: review of lists, stacks and queues; hash tables, priority queues, search trees, introduction to graphs; searching and sorting; runtime analysis; programming projects and lab exercises.",
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 401",
+      "course_title": "Computer Algorithms I",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Design and analysis of computer algorithms. Divide-and-conquer, dynamic programming, greedy method, backtracking. Algorithms for sorting, searching, graph computations, pattern matching, NP-complete problems.",
+      "course_information": "Same as MCS 401. 3 undergraduate hours. 4 graduate hours.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "MCS 360",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 251",
+                "course_title": "Data Structures",
+                "description": "Design, usage and analysis of data structures: review of lists, stacks and queues; hash tables, priority queues, search trees, introduction to graphs; searching and sorting; runtime analysis; programming projects and lab exercises.",
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 499",
+      "course_title": "Professional Development Seminar",
+      "credit_hours": 0,
+      "description": "Graduating seniors will be provided with information regarding future career paths and will provide information regarding the program to be used for assessment purposes. Students take the CS Major Field Exam as part of this course.",
+      "course_information": "Satisfactory/Unsatisfactory grading only.",
+      "prerequisites": {
+        "non_course_requirements": [
+          "Open only to seniors",
+          "Approval of the department",
+          "Must be taken in the student's last semester of study"
+        ]
+      },
+      "registration_information": null
+    }
+  ],
+  "data_notes": [
+    "Prerequisite groups preserve AND/OR relationships. Within a group, condition 'all_of' means every listed item is required; 'any_of' means one listed item is sufficient.",
+    "Prerequisite course titles and descriptions are included when they were available in the supplied text. Values are null when the supplied text did not include that course's title or description.",
+    "Credit or concurrent registration is represented with credit_or_concurrent_registration: true.",
+    "Non-course conditions such as class standing, admission, or department approval are stored in prerequisites.non_course_requirements."
+  ]
+}

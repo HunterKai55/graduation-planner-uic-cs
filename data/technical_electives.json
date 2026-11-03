@@ -1,0 +1,1448 @@
+{
+  "courses": [
+    {
+      "course_code": "CS 351",
+      "course_title": "Advanced Data Structure Practicum",
+      "credit_hours": 3,
+      "description": "Design and implementation details of advanced data structure and non-trivial algorithms with an emphasis on amortized analysis.",
+      "course_information": "Prerequisite(s): Grade of C or better in CS 251; and Grade of C or better in CS 211.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 211",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 378",
+      "course_title": "Framework-based Software Development for Hand-held Devices",
+      "credit_hours": 3,
+      "description": "Multi-platform app development using software frameworks; the integration of framework-generated code with native code of mobile operating systems; numerous programming assignments in multiple programming languages.",
+      "course_information": "Prerequisite(s): CS 342.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 342",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 398",
+      "course_title": "Undergraduate Design/Research",
+      "credit_hours": null,
+      "description": null,
+      "course_information": null,
+      "prerequisites": null,
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 402",
+      "course_title": "Algorithms in Practice",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Design, implementation and presentation of algorithms and data structures emphasizing dynamic programming and both exact and heuristic approaches to NP-hard problems; problem solving sessions, programming projects and presentations.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): CS 401; and consent of the instructor.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 401",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "consent of the instructor"
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 407",
+      "course_title": "Economics and Computation",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Techniques for analysis of markets, making decisions with other strategic agents, and understanding how algorithms affect the incentives of market participants. These include game theory, mechanism design, auction theory, and social choice theory.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in CS 251.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 411",
+      "course_title": "Artificial Intelligence I",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Definitions of intelligence and AI, autonomous agents, architectures of agents and types of environments, search techniques, adversarial search, search in complex environments, logic and probability, learning, generative AI.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in CS 251.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 412",
+      "course_title": "Introduction to Machine Learning",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Mechanism, implementation, and application of systems that improve automatically based on past experience, including classification, density estimation, clustering, and online learning tasks and solutions.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Extensive computer use required. MATLAB will be used for some of the homework assignments, but prior experience with it is not required. Prerequisite(s): Grade of C or better in CS 251; and IE 342 or STAT 381 or ECE 341.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "IE 342",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "STAT 381",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "ECE 341",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 415",
+      "course_title": "Computer Vision I",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Fundamental concepts and techniques in computer vision; image filtering, feature detection, description, matching, image segmentation, and object recognition; hands-on projects and assignments.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Credit is not given for CS 415 if the student has credit in ECE 415. Prerequisite(s): CS 251 or MCS 360; or consent of the instructor.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "MCS 360",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "consent of the instructor"
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 418",
+      "course_title": "Introduction to Data Science",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Provides an in-depth overview of data science in engineering. Topics include modeling, storage, manipulation, integration, classification, analysis, visualization, information extraction, and big data in the engineering domain.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Extensive computer use required. Prerequisite(s): Grade of C or better in CS 251; and STAT 381 or IE 342 or ECE 341.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "STAT 381",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "IE 342",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "ECE 341",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 421",
+      "course_title": "Natural Language Processing",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Design of natural language processing systems; part-of speech tagging, statistical and symbolic parsers; semantic interpretation; discourse and dialogue processing; natural language generation; applications.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): CS 301 or MCS 441.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 301",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "MCS 441",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 422",
+      "course_title": "User Interface Design and Programming",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "User interface design, implementation, and evaluation: user-centered design methodologies, windowing systems, I/O devices and techniques, event-loop programming, user studies. Programming projects.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): CS 342.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 342",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 424",
+      "course_title": "Visualization and Visual Analytics",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Geospatial visualization, scientific visualization, medical visualization, information visualization, and social network visualization, interaction, data analysis, human factors, dynamic data, privacy, uncertainty, data transforms.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Extensive computer use required. Prerequisite(s): Grade of C or better in CS 251.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 425",
+      "course_title": "Computer Graphics I",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Principles of interactive computer graphics. Raster and vector display, techniques and hardware considerations. Introduction to two-dimensional and three dimensional rendering.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Extensive computer use required. Prerequisite(s): Grade of C or better in CS 251. Class Schedule Information: To be properly registered, students must enroll in one Laboratory-Discussion and one Lecture-Discussion.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Laboratory-Discussion and one Lecture-Discussion."
+    },
+    {
+      "course_code": "CS 426",
+      "course_title": "Video Game Design and Development",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Theory and practice of video game design and programming. Students will form interdisciplinary teams, to design, build and demonstrate video games or related interactive simulation environments.",
+      "course_information": "Same as DES 426. 3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in CS 251; or Grade of C or better in DES 450.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "DES 450",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 427",
+      "course_title": "Creative Coding",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Creative Coding investigates how contemporary computational techniques can inspire novel forms of art making, providing students with the skills to make use of technology for expressive purposes.",
+      "course_information": "Same as DES 427. 3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in CS 251.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 428",
+      "course_title": "Virtual, Augmented and Mixed Reality",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Virtual reality, augmented reality, and mixed reality environments, display devices, input devices, tracking, navigation, interaction, collaboration, generating visuals and sounds, software tools, applications, evaluation, safety.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Extensive computer use required. Prerequisite(s): CS 342; or consent of the instructor.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 342",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "consent of the instructor"
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 440",
+      "course_title": "Software Engineering I",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Software life-cycle model, requirement specification techniques, large-scale software design techniques and tools, implementation issues, testing and debugging techniques, software maintenance.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Previously listed as EECS 470. Prerequisite(s): CS 342.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 342",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 441",
+      "course_title": "Engineering Distributed Objects For Cloud Computing",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Provides a broad but solid overview of engineering distributed object for cloud computing. Students will learn the theory and principles of engineering distributed objects for cloud environments. Programming assignments required.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Extensive computer use required. Prerequisite(s): Grade of C or better in CS 341 or Grade of C or better in CS 342; and Grade of C or better in CS 361.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 341",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 342",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 361",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 442",
+      "course_title": "Software Engineering II",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Advanced concepts in software development: requirements engineering, cost estimation, risk analysis, extreme programming, regression test case selection, and design patterns. Software lab assignments required.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Extensive computer use required. Prerequisite(s): CS 440.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 440",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 450",
+      "course_title": "Introduction to Networking",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Network protocols, algorithms, and software issues. Topics include the Open Systems Interconnect model, data link, network and transport layers, TCP/IP, ATM, mobile networks.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Credit is not given for CS 450 if the student has credit for ECE 433. Prerequisite(s): CS 361.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 361",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 453",
+      "course_title": "Introduction to Parallel and Distributed Processing",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Foundations of parallel and distributed processing; clusters and parallel systems; communication primitives; programming with MPI; scalability; distributed graph algorithms; distributed mutual exclusion, deadlock detection, peer-to-peer systems.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in CS 251. Recommended background: CS 401.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "Recommended background: CS 401."
+    },
+    {
+      "course_code": "CS 454",
+      "course_title": "Principles of Concurrent Programming",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Focuses on the foundations and basic principles of concurrent programming, covering high-level notions of concurrent correctness and connecting those abstract concepts to real-world programming constructs and algorithms used in practice.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): CS 361.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 361",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 455",
+      "course_title": "Introduction to High Performance Computing",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Explore the foundations of high-performance computing (HPC), the architecture of supercomputers, and the challenges in developing massive heterogeneous systems to address complex real-world problems.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): CS 361; or consent of the instructor.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 361",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "consent of the instructor"
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 461",
+      "course_title": "Operating Systems Design and Implementation",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Kernel design and implementation; process management; effective management of machine resources: resource allocation and scheduling, mutual exclusion, deadlock avoidance, memory management policies, devices and file systems, and client-server systems.",
+      "course_information": "3 undergraduate hours; 4 graduate hours. Previously listed as CS 385. Extensive computer use required. Prerequisite(s): CS 361.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 361",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 463",
+      "course_title": "Systems Performance and Concurrent Computing",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Understanding the many systems factors that affect program performance, including program design for concurrent computing, profiling and program optimization.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): CS 361. Recommended Background: CS 461.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 361",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "Recommended Background: CS 461."
+    },
+    {
+      "course_code": "CS 466",
+      "course_title": "Computer Architecture",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Design principles of computer architecture. Topics include: instruction set architecture, pipelining, instruction-level parallelism, caches, main memory, and thread-level parallelism.",
+      "course_information": "Same as ECE 466. 3 undergraduate hours. 4 graduate hours. Prerequisite(s): ECE 366 or CS 261.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "ECE 366",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "CS 261",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 468",
+      "course_title": "Network Security",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Introduces basic concepts of security and privacy, and covers the principles and practice of network security. Given the ubiquitousness of network communications, this course explores a range of systems and applications, and the threats they face.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): CS 361.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 361",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 473",
+      "course_title": "Compiler Design",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Language translation: lexical analysis, parsing schemes, symbol table management, syntax and semantic error detection, and code generation. Development of fully-functional compiler.",
+      "course_information": "Same as MCS 411. 3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in CS 301 or Grade of C or better in MCS 441; and Grade of C or better in CS 251 or Grade of C or better in MCS 360; and Grade of C or better in CS 261.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 301",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "MCS 441",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "MCS 360",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 261",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 474",
+      "course_title": "Object-Oriented Languages and Environments",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Data abstraction, classes and objects, messages and methods, polymorphism and dynamic binding, inheritance. Object-oriented design. Pure and hybrid object-oriented languages.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Previously listed as EECS 474. Prerequisite(s): CS 342.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 342",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 476",
+      "course_title": "Programming Language Design",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Definition, design, and implementation of programming languages. Syntactic and semantic description; variable bindings, control and data structures, parsing, code generation, optimization; exception handling; data abstraction.",
+      "course_information": "Same as MCS 415. 3 undergraduate hours. 4 graduate hours. Previously listed as EECS 476. Prerequisite(s): MCS 360; or CS 341.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "MCS 360",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "CS 341",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 477",
+      "course_title": "Public Policy, Legal, and Ethical Issues in Computing, Privacy, and Security",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Contemporary topics involving legal, public policy, and/or ethical issues in computing, especially privacy, security, and surveillance.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): Consent of the instructor.",
+      "prerequisites": {
+        "non_course_requirements": [
+          "Consent of the instructor"
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 478",
+      "course_title": "Software Development for Mobile Platforms",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Design and implementation of mobile applications; operating systems, object-oriented languages and programming environments for mobile platforms; integration with hardware components; and location-aware applications. Programming assignments required.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Extensive computer use required. Prerequisite(s): CS 342.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 342",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 479",
+      "course_title": "Wearables and Nearables Technology Laboratory",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Practical experience in design and development of wearable and nearable devices. Acquisition and processing of sensors data. Design and development of user-friendly user interface.",
+      "course_information": "Same as BME 479. 3 undergraduate hours; 4 graduate hours. Extensive computer use required. Prerequisite(s): BME 240; or CS 251; or consent of the instructor. Recommended background: ECE 210 and CS 109.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "BME 240",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "consent of the instructor"
+        ]
+      },
+      "registration_information": "Recommended background: ECE 210 and CS 109."
+    },
+    {
+      "course_code": "CS 480",
+      "course_title": "Database Systems",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Database design, logical design, physical design. Relational databases. Recovery, concurrency control. Normalization.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in CS 251.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 483",
+      "course_title": "Big Data Mining",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Data mining for very large datasets from a foundational and practical standpoint including similarity search, data-stream processing, advanced technology for search engines, recommendation systems, and graph analytics.",
+      "course_information": "3 undergraduate hours; 4 graduate hours. Credit is not given for CS 483 if the student has credit in CS 583. Prerequisite(s): Grade of C or better in CS 251; and ECE 341 or IE 342 or STAT 381. Recommended background: CS 401 and CS 480.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "ECE 341",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "IE 342",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "STAT 381",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "Recommended background: CS 401 and CS 480."
+    },
+    {
+      "course_code": "CS 484",
+      "course_title": "Secure Web Application Development",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Web applications integrate concepts from software engineering, systems programming, and computer security. Teaches security through web development, enabling students to design, deploy, scale, attack, and defend modern web applications.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Extensive computer use required. Prerequisite(s): Credit or concurrent registration in CS 341.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 341",
+                "course_title": null,
+                "description": null,
+                "credit_or_concurrent_registration": true
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 485",
+      "course_title": "Networked Operating Systems Programming",
+      "credit_hours": {
+        "undergraduate": 4,
+        "graduate": 5
+      },
+      "description": "Concepts, design, and programming of multi-process and distributed systems; inter-process communications; fault tolerance; distributed programming semantics. Programming assignments and project required.",
+      "course_information": "4 undergraduate hours. 5 graduate hours. Previously listed as EECS 471. Prerequisite(s): CS 385.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 385",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 487",
+      "course_title": "Building Secure Computer Systems",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Building and programming secure systems; protecting systems from threats and reduction of vulnerabilities; Includes application, host and network security.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Extensive computer use required. Prerequisite(s): Grade of C or better in CS 385; and senior standing or above; or consent of the instructor.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 385",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "senior standing or above",
+          "consent of the instructor"
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 488",
+      "course_title": "Introduction to Cryptography",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Foundational concepts: encryption schemes, hash functions, message authentication codes, digital signatures. Practical systems: stream and block ciphers, SHA. Advanced topics: secure computation, zero-knowledge proofs, blockchain.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in CS 251; and IE 342 or STAT 381 or STAT 401.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "CS 251",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "IE 342",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "STAT 381",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "STAT 401",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "CS 489",
+      "course_title": "Human Augmentics",
+      "credit_hours": null,
+      "description": null,
+      "course_information": null,
+      "prerequisites": null,
+      "registration_information": null
+    },
+    {
+      "course_code": "ECE 469",
+      "course_title": "Hardware Description Language Based Digital and Computer System Design",
+      "credit_hours": {
+        "undergraduate": 4,
+        "graduate": 5
+      },
+      "description": "Hardware description language (HDL) introduction; digital system design including arithmetic circuit, datapath and control; basic processor architecture and design; use of CAD tools for simulation, synthesis, and verification.",
+      "course_information": "4 undergraduate hours. 5 graduate hours. Prerequisite(s): ECE 366; and ECE 465. Class Schedule Information: To be properly registered, students must enroll in one Lecture and one Laboratory.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "ECE 366",
+                "course_title": null,
+                "description": null
+              },
+              {
+                "course_code": "ECE 465",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Lecture and one Laboratory."
+    },
+    {
+      "course_code": "IT 301",
+      "course_title": "Networks and Distributed Computing Technology",
+      "credit_hours": 3,
+      "description": "Introduction to the use of computers on a network. Installation and configuring of networking components: Firewalls, nameserver and gateways. Use of both wired and wireless networks.",
+      "course_information": "Prerequisite(s): IT 201. Class Schedule Information: To be properly registered, students must enroll in one Laboratory and one Lecture-Discussion.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "IT 201",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Laboratory and one Lecture-Discussion."
+    },
+    {
+      "course_code": "IT 302",
+      "course_title": "Database Administration and Installation",
+      "credit_hours": 3,
+      "description": "A study of the use of existing databases (bibliographic and non-bibliographic formats), their data structure, processing and retrieval data, integrity and security, and interface design issues.",
+      "course_information": "Prerequisite(s): IT 202. Class Schedule Information: To be properly registered, students must enroll in one Laboratory and one Lecture-Discussion.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "IT 202",
+                "course_title": null,
+                "description": null
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": "To be properly registered, students must enroll in one Laboratory and one Lecture-Discussion."
+    },
+    {
+      "course_code": "MCS 320",
+      "course_title": "Introduction to Symbolic Computation",
+      "credit_hours": 3,
+      "description": "Introduction to computer algebra systems (MAPLE), symbolic computation, and the mathematical algorithms employed in such computation, with examples and applications to topics in undergraduate mathematics.",
+      "course_information": "Prerequisite(s): Grade of C or better in MATH 210; and grade of C or better in: MCS 160 or MCS 260 or CS 107 or CS 109 or CS 111 or equivalent.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "MATH 210",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "MCS 160",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "MCS 260",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 107",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 109",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 111",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "MCS 425",
+      "course_title": "Codes and Cryptography",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Mathematics of communications theory, basic information theory necessary to understand both coding theory and cryptography, basic ideas and highlights for both coding theory and cryptography, including public-key cryptosystems.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in MATH 215; and Grade of C or better in MATH 218 or Grade of C or better in MATH 320; or consent of the instructor.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "MATH 215",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          },
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "MATH 218",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "MATH 320",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "consent of the instructor"
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "MCS 471",
+      "course_title": "Numerical Analysis",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Introduction to numerical analysis; floating point arithmetic, computational linear algebra, iterative solution to nonlinear equations, interpolation, numerical integration, numerical solution of ODEs, computer subroutine packages.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in MCS 260; or grade of C or better in CS 107 or CS 109 or CS 111; or consent of instructor.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "any_of",
+            "courses": [
+              {
+                "course_code": "MCS 260",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 107",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 109",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              },
+              {
+                "course_code": "CS 111",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "consent of instructor"
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "MCS 481",
+      "course_title": "Computational Geometry",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Algorithmic problems on sets of points, rectangles, intervals, arcs, chords, polygons. Counting, reporting, location, intersection, pairing; static and dynamic data structures.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in MCS 401 or consent of the instructor.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "MCS 401",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ],
+        "non_course_requirements": [
+          "consent of the instructor"
+        ]
+      },
+      "registration_information": null
+    },
+    {
+      "course_code": "STAT 471",
+      "course_title": "Linear and Non-Linear Programming",
+      "credit_hours": {
+        "undergraduate": 3,
+        "graduate": 4
+      },
+      "description": "Linear programming, simplex algorithm, degeneracy, duality theorem sensitivity analysis, convexity, network simplex methods, assignment problems. Constrained and unconstrained minima. Quasi-Newton methods. Ellipsoidal methods of Kachian.",
+      "course_information": "3 undergraduate hours. 4 graduate hours. Prerequisite(s): Grade of C or better in MATH 310.",
+      "prerequisites": {
+        "groups": [
+          {
+            "condition": "all_of",
+            "courses": [
+              {
+                "course_code": "MATH 310",
+                "course_title": null,
+                "description": null,
+                "minimum_grade": "C"
+              }
+            ]
+          }
+        ]
+      },
+      "registration_information": null
+    }
+  ],
+  "data_notes": [
+    "Prerequisite groups preserve AND/OR relationships. Within a group, condition 'all_of' means every listed item is required; 'any_of' means one listed item is sufficient.",
+    "Prerequisite course titles and descriptions are included when they were available in the supplied text. Values are null when the supplied text did not include that course's title or description.",
+    "Credit or concurrent registration is represented with credit_or_concurrent_registration: true.",
+    "Non-course conditions such as class standing, admission, or department approval are stored in prerequisites.non_course_requirements.",
+    "Credit hours are stored as a number when only one value is given, or as an object with undergraduate/graduate keys when both are specified."
+  ]
+}
