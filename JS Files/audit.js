@@ -1,0 +1,3 @@
+
+const mainElement = document.querySelectorAll
+
