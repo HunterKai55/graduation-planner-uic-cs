@@ -1,0 +1,9 @@
+.audit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audit_label {
+    color: black;
+}
