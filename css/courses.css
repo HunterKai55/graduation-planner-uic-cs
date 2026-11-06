@@ -1,0 +1,54 @@
+.page-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 30px;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    background: rgb(8, 222, 255);
+    padding: 5px;
+    width: 300px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 5px black;
+    margin: 10px;
+    position: relative;
+    transition: width 1.5s;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.magnifier {
+    color: red;
+    position: absolute;
+    left: 15px;
+    width: 25px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.active.search-bar {
+    width: 50px;
+    display: flex;
+}
+
+.active.input {
+    width: 0;
+}
+
+.input {
+    margin: 10px 50px;
+    width: 100%;
+    color: aliceblue;
+    border: none;
+    background: transparent;
+    outline: none;
+    transition-delay: 0.5s;
+}
