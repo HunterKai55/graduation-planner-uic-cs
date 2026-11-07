@@ -1,14 +1,109 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+ 
+:root {
+    --sidebar-width: 250px;
+}
+ 
+.content {
+    margin-left: var(--sidebar-width);
+    padding: 24px 40px 40px 80px;
+    color: #111827;
+    font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
 }
 
-body{
-    min-height: 100vh;
-    background-color: rgb(205, 80, 80);
+.credits-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+ 
+.progress {
+    width: 100%;
+    max-width: 480px;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+ 
+.progress-fill {
+    height: 100%;
+    background: #2563eb;
+    border-radius: 999px;
+}
+ 
+.audit {
     display: flex;
     flex-direction: column;
+    gap: 16px;
+    max-width: 760px;
+}
+ 
+.expandable {
+    background-color: #eff6ff;
+    padding: 24px 32px;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+ 
+.exptitle {
+    font-size: 16px;
+    font-weight: 600;
+}
+ 
+.expcount {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 8px 0 22px;
+}
+ 
+.expstatus {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #4b5563;
+}
+ 
+.expstatus.done {
+    color: #10b981;
+}
+ 
+.expmain {
+    display: none;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #dbe6fb;
+}
+ 
+.expandable.active .expmain {
+    display: block;
+}
+ 
+.toggle {
+    position: absolute;
+    top: 68px;
+    right: 48px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    color: #111827;
+    transition: transform 0.2s ease-in-out;
 }
+ 
+.expandable.active .toggle {
+    transform: rotate(180deg);
+}
+ 
