@@ -1,0 +1,44 @@
+{
+    "coursesTaken": [
+        {
+            "type": 0,
+            "courseField": "ENGL",
+            "courseNum": "160",
+            "courseName": "Academic Writing I",
+            "grade": "A",
+            "hours": 3
+        },
+        {
+            "type": 0,
+            "courseField": "ENGL",
+            "courseNum": "161",
+            "courseName": "Academic Writing II",
+            "grade": "A",
+            "hours": 3
+        },
+        {
+            "type": 1,
+            "courseField": "MATH",
+            "courseNum": "310",
+            "courseName": "Linear Algebra I",
+            "grade": "B",
+            "hours": 4
+        },
+        {
+            "type": 11,
+            "courseField": "CS",
+            "courseNum": "111",
+            "courseName": "Programming and Copmuters I",
+            "grade": "A",
+            "hours": 3
+        },
+        {
+            "type": 12,
+            "courseField": "CS",
+            "courseNum": "418",
+            "courseName": "Intro to Data Science",
+            "grade": "B",
+            "hours": 4
+        }
+    ]
+}
