@@ -133,13 +133,13 @@ function checkGenEds(courses) {
     }
 
     passingCourses.forEach((c) => {
-        if (c.type != 1 && c.type != 2 && c.type != 3) {
-            
+        if (c.type != 1 && c.type != 2 && c.type != 3 && c.type != 10 && sumHours(passingCourses, c.type, 3)) {
+            totalCount++;
         }
     });
 
     const counter = document.getElementById("gencount");
-    counter.textContent = `${totalCount} / 10`;
+    counter.textContent = `${totalCount} / 9`;
 }
 
 function checkForSpecific(courses, reqClasses) {
