@@ -1,2 +1,11 @@
-# Ignore the backend API
-RMP-API/
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Build output
+dist/
+
+# IDE
+.vscode/
