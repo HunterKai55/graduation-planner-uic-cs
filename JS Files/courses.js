@@ -80,3 +80,38 @@ function setUpCourseGrid(courses) {
 
 setUpCourseGrid(data);
 
+function searchCourses() {
+
+    // Get the search bar
+    const searchBar = document.getElementById("courseSearch");
+
+    // Get the course grid
+    const courseGrid = document.querySelector(".course-grid");
+
+    // Listen for user input
+    searchBar.addEventListener("input", function () {
+
+        const searchText = searchBar.value.toLowerCase().trim();
+
+        // Go through each course card
+        const courses = courseGrid.children;
+
+        for (let i = 0; i < courses.length; i++) {
+
+            const course = courses[i];
+
+            // Get the text inside the card
+            const courseInfo = course.textContent.toLowerCase();
+
+            // Show matching courses
+            if (courseInfo.includes(searchText)) {
+                course.style.display = "";
+            } else {
+                course.style.display = "none";
+            }
+        }
+    });
+}
+
+searchCourses();
+
