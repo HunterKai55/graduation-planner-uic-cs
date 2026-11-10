@@ -62,6 +62,42 @@
             "courseName": "Intro to Data Science",
             "grade": "B",
             "hours": 4
+        },
+        {
+            "type": 11,
+            "subtype": 5,
+            "courseField": "ENGR",
+            "courseNum": "100",
+            "courseName": "Engineering Success Seminar",
+            "grade": "A",
+            "hours": 1
+        },
+        {
+            "type": 11,
+            "subtype": 2,
+            "courseField": "CS",
+            "courseNum": "211",
+            "courseName": "Programming Practiculum",
+            "grade": "B",
+            "hours": 3
+        },
+        {
+            "type": 6,
+            "subtype": 99,
+            "courseField": "ANTH",
+            "courseNum": "101",
+            "courseName": "World Cultures: Introduction to Social Anthropology",
+            "grade": "B",
+            "hours": 3
+        },
+        {
+            "type": 4,
+            "subtype": 99,
+            "courseField": "BIOS",
+            "courseNum": "104",
+            "courseName": "Biology for Non-majors",
+            "grade": "C",
+            "hours": 4
         }
     ]
 }
