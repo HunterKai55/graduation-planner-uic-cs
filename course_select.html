@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Courses</title>
+    <link rel="stylesheet" href="css/planner.css">
+    <link rel="stylesheet" href="css/course_select.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+            <div>
+                <h1>UIC CS</h1>
+                <p>Graduation Tracker</p>
+            </div>
+        </div>
+        <div class="user">
+            <div class="avatar"></div>
+            <div>
+                <strong>Username</strong>
+                <p>B.S. Computer Science • Year</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+        <nav class="sidebar">
+            <h2>Graduation Track</h2>
+            <a href="index.html">Schedule</a>
+            <a href="planner.html" class="active">My Plan</a>
+            <a href="courses.html">Course Information</a>
+            <a href="degree_audit.html">Degree Audit</a>
+            <hr>
+            <a href="settings.html">Settings</a>
+        </nav>
+
+        <main class="picker">
+            <section class="panel selected-panel">
+                <h2 id="heading">Spring 2027</h2>
+                <ul id="selected-list" class="selected-list"></ul>
+                <input id="search" class="search" type="search" placeholder="Search by course code or name" hidden>
+                <button id="search-btn" class="btn" type="button">Search for Course</button>
+                <button id="save-btn" class="btn" type="button">Save Selection</button>
+            </section>
+
+            <section class="panel suggested-panel">
+                <h2>Suggested Courses</h2>
+
+                <h3>Gen Eds</h3>
+                <ul id="gened-list" class="suggest-list"></ul>
+
+                <h3>Engineering Courses</h3>
+                <ul id="eng-list" class="suggest-list"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="JS Files/course_select.js"></script>
+</body>
+</html>

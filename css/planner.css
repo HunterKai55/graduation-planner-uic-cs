@@ -169,3 +169,43 @@ main { flex: 1; padding: 14px 20px; }
     font-size: 20px;
 
 }
+
+
+/*ADDING COURSES*/ 
+
+.suggestion,
+.planned {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.course-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-info span {
+    font-size: 12px;
+}
+
+.add-btn {
+    padding: 4px 12px;
+    border: none;
+    border-radius: 999px;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-btn:hover { background: #1d4ed8; }
+
+.remove-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
