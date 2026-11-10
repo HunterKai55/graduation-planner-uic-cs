@@ -1,17 +1,26 @@
 :root {
     --chicago-red: #E4002B;
     --chicago-blue: #41B6E6;
+    --blue-dark: #1e3a8a;
+    --blue: #2563eb;
+    --blue-panel: #aacfff;
+    --blue-light: #eef5ff;
+    --text: #0f172a;
+    --muted: #64748b;
 }
 
 .page-container {
     display: flex;
     min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
 }
 
 main {
-    margin-left: 20%;
-    width: 80%;
+    flex: 1;
+    min-width: 0;
     padding: 20px;
+    margin-left: 0;
 }
 
 .search-bar{
@@ -75,7 +84,7 @@ main {
     width: 200px;
     height: 200px;
     border-radius: 20px;
-    border: 8px double var(--chicago-red);
+    border: 8px double var(--blue-dark);
     font-weight: 700;
     text-align: center;
     font-size: 1rem;
