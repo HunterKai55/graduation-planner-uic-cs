@@ -76,11 +76,77 @@ main {
     height: 200px;
     border-radius: 20px;
     border: 8px double var(--chicago-red);
-    color: white;
     font-weight: 700;
     text-align: center;
     font-size: 1rem;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 1em;
+    grid-template-areas: 
+    "box-1 box-2 box-3 box-3"
+    "box-4 box-4 box-5 box-5"
+    "box-4 box-4 box-5 box-5";
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+}
+
+.box{
+    background-color: var(--chicago-blue);
+    border-radius: 20px;
+    border: 8px double #2b4690;
+    text-align: center;
+}
+
+p {
+    font-size: 1.25rem;
+    margin: 10px;
+}
+
+#creditHours {
+    font-size: 4rem;
+}
+
+.review-card {
+    background-color: var(--chicago-blue);
+    border-radius: 20px;
+    border: 8px double #2b4690;
+    padding: 10px;
+}
+
+.professor-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.professor-form button {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+
+    background-color: #E4002B;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.professor-form button:hover {
+    background-color: #bd0024;
+    transform: translateY(-2px);
+}
+
+.professor-form button:active {
+    transform: translateY(0);
 }
