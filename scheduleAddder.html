@@ -96,8 +96,6 @@
         </main>
         
         <script>
-            const pathSegments = window.location.pathname.split('/').filter(Boolean);
-            const PROJECT_PREFIX = pathSegments.length > 0 ? `${pathSegments[0]}_` : 'local_';
             let timeArr = [""]
             let mon = false;
             let tues = false;
@@ -277,7 +275,7 @@
                     let cnt = localStorage.length;
                     let nameOfItem = "schedule" + String(cnt);
 
-                    storage.setItem(${PROJECT_PREFIX}nameOfItem, myStr);
+                    storage.setItem(nameOfItem, myStr);
                     alert("Course added");
                     window.location.href = "index.html";
                 });
