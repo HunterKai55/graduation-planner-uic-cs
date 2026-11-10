@@ -94,133 +94,136 @@
                 </div>
             </div>
         </div>
-        <script>
-            document.querySelectorAll(".addBttn").forEach(function (btn) {
-                btn.addEventListener("click", function () {
-                    window.location.href = "scheduleAddder.html";
-                });
-            });
-            //let storage = window.localStorage;
-            let cnt = localStorage.length;
-            if (cnt == 0) {
-                localStorage.setItem("schedule0", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
-            }
-            for (let i = 1; i < cnt - 1; i++) {
-                let itemName = "schedule" + String(i+1);
-                console.log(localStorage.getItem(itemName));
-                let item = localStorage.getItem(itemName);
-                const para = document.createElement("h2");
-                
-                let size = 0;
-                
-                if (item)
-                    size = item.length;
-                    const w = item.split('\n');
-                    const size2 = w[0].length;
-                    let courseName = "";
-                    let name = false
-
-                    for (let i = 0; i < size2; i++) { 
-                        console.log(w[0][i]);
-                       
-                        if (w[0][i] == ']')
-                            name = false;
-                        if (name)
-                            courseName = courseName + w[0][i];
-                        if (w[0][i] == '[')
-                            name = true;
-                    }
-                    console.log(w);
-                    console.log(size);
-                    para.innerHTML = courseName;
-                    para.style.marginLeft = "15px"
-                    para.style.marginBottom = "15px"
-                    console.log("CourseName: " + courseName);
-                    //--------------------------------------------------------------
-                    const timeSection = document.createElement("p");
-                    const size3 = w[2].length;
-                    let time = "";
-                    let name1 = false
-
-                    for (let i = 0; i < size3; i++) {
-                        console.log(w[2][i]);
-
-                        if (w[2][i] == ']')
-                            name1 = false;
-                        if (name1)
-                            time = time + w[2][i];
-                        if (w[2][i] == '[')
-                            name1 = true;
-                    }
-                    
-                    timeSection.innerHTML = time;
-                    timeSection.style.color = "grey"
-                    timeSection.style.marginLeft = "15px"
-                    
-                    console.log("time: " + time);
-
-                    //-------------------------------------------
-                    //const daySection = document.createElement("p");
-                    const size4 = w[1].length;
-                    let day = "";
-                    let name2 = false
-
-                    for (let i = 1; i < size4; i++) {
-                        console.log(w[1][i]);
-                        // if (w[2][i] == ',') { 
-                        //     continue;
-                        // }
-                        if (w[1][i] == ']')
-                            name1 = false;
-                        if (name1)
-                            console.log("checking: " + w[2][i]);
-                            if (w[1][i] == 'M') { 
-                                const ddd = document.getElementById("mon-DIV"); //only one instance of a node exist.. need to duplicate
-                                if (ddd)
-                                    ddd.appendChild(timeSection);//only one instance of a node exist.. need to duplicate
-                                    ddd.appendChild(para.cloneNode(true));
-                                    console.log("MONDAY");
-                            }
-                            if (w[1][i] == 'T') {
-                                const ddd1 = document.getElementById("tues-DIV");
-                                if (ddd1)
-                                    ddd1.appendChild(timeSection.cloneNode(true));
-                                    ddd1.appendChild(para.cloneNode(true));
-                                    console.log("TUESDAY");
-                            }
-                            if (w[1][i] == 'W') {
-                                const ddd2 = document.getElementById("wed-DIV");
-                                if (ddd2)
-                                    ddd2.appendChild(timeSection.cloneNode(true));
-                                    ddd2.appendChild(para.cloneNode(true));
-                                    console.log("WEDNESDAY");
-                                    
-                            }
-                            if (w[1][i] == 'R') {
-                                const ddd3 = document.getElementById("thur-DIV");
-                                if (ddd3)
-                                    ddd3.appendChild(timeSection.cloneNode(true));
-                                    ddd3.appendChild(para.cloneNode(true));
-                                    console.log("Thursday");
-                            }
-                            if (w[1][i] == 'F') {
-                                const ddd4 = document.getElementById("frid-DIV");
-                                if (ddd4)
-                                    ddd4.appendChild(timeSection.cloneNode(true));
-                                    ddd4.appendChild(para.cloneNode(true));
-                                    console.log("FrIDAY");
-                            }
-                        if (w[1][i] == '[')
-                            name1 = true;
-                    }
-
-                    
-
-                   
-                        
-            }
+        <script src="https://tomashubelbauer.github.io/github-pages-local-storage/index.js">
             
-
+            <script>
+                document.querySelectorAll(".addBttn").forEach(function (btn) {
+                    btn.addEventListener("click", function () {
+                        window.location.href = "scheduleAddder.html";
+                    });
+                });
+                //let storage = window.localStorage;
+                let cnt = localStorage.length;
+                if (cnt == 0) {
+                    localStorage.setItem("schedule0", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
+                }
+                for (let i = 1; i < cnt - 1; i++) {
+                    let itemName = "schedule" + String(i+1);
+                    console.log(localStorage.getItem(itemName));
+                    let item = localStorage.getItem(itemName);
+                    const para = document.createElement("h2");
+                    
+                    let size = 0;
+                    
+                    if (item)
+                        size = item.length;
+                        const w = item.split('\n');
+                        const size2 = w[0].length;
+                        let courseName = "";
+                        let name = false
+    
+                        for (let i = 0; i < size2; i++) { 
+                            console.log(w[0][i]);
+                           
+                            if (w[0][i] == ']')
+                                name = false;
+                            if (name)
+                                courseName = courseName + w[0][i];
+                            if (w[0][i] == '[')
+                                name = true;
+                        }
+                        console.log(w);
+                        console.log(size);
+                        para.innerHTML = courseName;
+                        para.style.marginLeft = "15px"
+                        para.style.marginBottom = "15px"
+                        console.log("CourseName: " + courseName);
+                        //--------------------------------------------------------------
+                        const timeSection = document.createElement("p");
+                        const size3 = w[2].length;
+                        let time = "";
+                        let name1 = false
+    
+                        for (let i = 0; i < size3; i++) {
+                            console.log(w[2][i]);
+    
+                            if (w[2][i] == ']')
+                                name1 = false;
+                            if (name1)
+                                time = time + w[2][i];
+                            if (w[2][i] == '[')
+                                name1 = true;
+                        }
+                        
+                        timeSection.innerHTML = time;
+                        timeSection.style.color = "grey"
+                        timeSection.style.marginLeft = "15px"
+                        
+                        console.log("time: " + time);
+    
+                        //-------------------------------------------
+                        //const daySection = document.createElement("p");
+                        const size4 = w[1].length;
+                        let day = "";
+                        let name2 = false
+    
+                        for (let i = 1; i < size4; i++) {
+                            console.log(w[1][i]);
+                            // if (w[2][i] == ',') { 
+                            //     continue;
+                            // }
+                            if (w[1][i] == ']')
+                                name1 = false;
+                            if (name1)
+                                console.log("checking: " + w[2][i]);
+                                if (w[1][i] == 'M') { 
+                                    const ddd = document.getElementById("mon-DIV"); //only one instance of a node exist.. need to duplicate
+                                    if (ddd)
+                                        ddd.appendChild(timeSection);//only one instance of a node exist.. need to duplicate
+                                        ddd.appendChild(para.cloneNode(true));
+                                        console.log("MONDAY");
+                                }
+                                if (w[1][i] == 'T') {
+                                    const ddd1 = document.getElementById("tues-DIV");
+                                    if (ddd1)
+                                        ddd1.appendChild(timeSection.cloneNode(true));
+                                        ddd1.appendChild(para.cloneNode(true));
+                                        console.log("TUESDAY");
+                                }
+                                if (w[1][i] == 'W') {
+                                    const ddd2 = document.getElementById("wed-DIV");
+                                    if (ddd2)
+                                        ddd2.appendChild(timeSection.cloneNode(true));
+                                        ddd2.appendChild(para.cloneNode(true));
+                                        console.log("WEDNESDAY");
+                                        
+                                }
+                                if (w[1][i] == 'R') {
+                                    const ddd3 = document.getElementById("thur-DIV");
+                                    if (ddd3)
+                                        ddd3.appendChild(timeSection.cloneNode(true));
+                                        ddd3.appendChild(para.cloneNode(true));
+                                        console.log("Thursday");
+                                }
+                                if (w[1][i] == 'F') {
+                                    const ddd4 = document.getElementById("frid-DIV");
+                                    if (ddd4)
+                                        ddd4.appendChild(timeSection.cloneNode(true));
+                                        ddd4.appendChild(para.cloneNode(true));
+                                        console.log("FrIDAY");
+                                }
+                            if (w[1][i] == '[')
+                                name1 = true;
+                        }
+    
+                        
+    
+                       
+                            
+                }
+                
+    
+            </script>
         </script>
         
     </main>
