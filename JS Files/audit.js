@@ -32,7 +32,7 @@ loadCourses();
  
 async function loadCourses() {
     const courses = new Map();
-    const response = await fetch("../data/audit_classes.json");
+    const response = await fetch("./data/audit_classes.json");
     const data = await response.json();
 
     data.coursesTaken.forEach((raw) => {

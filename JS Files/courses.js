@@ -4,9 +4,9 @@ const searchContainer = document.querySelector('.search-bar');
 const magnifier = document.querySelector('.magnifier');
 
 const fileUrls = [
-    "../data/non_engineering_required_courses.json",
-    "../data/required_engineering_courses.json",
-    "../data/technical_electives.json"
+    "./data/non_engineering_required_courses.json",
+    "./data/required_engineering_courses.json",
+    "./data/technical_electives.json"
 ];
 
 async function loadCourses() {
