@@ -103,8 +103,10 @@
             });
             //let storage = window.localStorage;
             let cnt = localStorage.length;
-            if (cnt == 0) {
+            if (cnt < 2) {
+                localStorage.clear()
                 localStorage.setItem("schedule0", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
+                localStorage.setItem("schedule1", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
             }
             for (let i = 1; i < cnt - 1; i++) {
                 let itemName = "schedule" + String(i+1);
