@@ -6,7 +6,11 @@ function fillInCourseInformation(){
     courseName.textContent = `${course.course_code} \n${course.course_title}`;
 
     var creditHours = document.getElementById("creditHours");
-    creditHours.textContent = `${course.credit_hours}`;
+    creditHours.textContent = `${
+    typeof course.credit_hours === "object"
+        ? course.credit_hours.undergraduate
+        : course.credit_hours
+    }`;
 
     var courseDescription = document.getElementById("courseDescription");
     courseDescription.textContent = `${course.description} \n${course.course_information}`;
@@ -61,7 +65,6 @@ function professorSearch() {
                 );
 
                 //display average difficulty
-
                 $("#averageDifficulty").text(result.professor.avgDifficulty + "/5");
 
                 // Display comments

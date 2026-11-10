@@ -51,8 +51,8 @@ function setUpCourseGrid(courses) {
     //gets the grid div from the html file
     const container = document.getElementById("courseGrid");
 
-    console.log("Courses received:", courses);
-    console.log("Grid container:", container);
+    //console.log("Courses received:", courses);
+    //console.log("Grid container:", container);
 
     courses.forEach(course => {
         container.innerHTML += `
