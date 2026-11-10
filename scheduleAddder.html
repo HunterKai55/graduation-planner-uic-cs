@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduation Planner</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <!-- The Top Bar-->
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+            <div>
+                <h1>UIC CS</h1>
+                <p>Graduation Tracker</p>
+            </div>
+        </div>
+        <div class="user">
+            <div class="avatar"></div>
+            <div>
+                <strong>Username</strong>
+                <p>B.S. Computer Science • Year</p>
+            </div>
+        </div>
+    </header>
+    <!-- Top Bar End-->
+
+
+    <div class="layout">
+        <!-- SIDE -->
+        <nav class="sidebar">
+            <h2>Graduation Track</h2>
+            <a href="index.html" class="active">Schedule</a>
+            <a href="planner.html">My Plan</a>
+            <a href="courses.html">Course Information</a>
+            <a href="degree_audit.html">Degree Audit</a>
+            <hr>
+            <a href="settings.html">Settings</a>
+        </nav>
+        <!-- SIDE END-->
+
+        <main>
+            <div style="width: 1200px; height: 700px; margin-left: 50px; margin-top: 25px; background-color: whitesmoke ">
+                <h1 style="margin-left: 40%"> Add Course </h1>
+                <div>
+                    <h2 style="margin-top: 5%; margin-left: 30%"> Name: </h2>
+                </div>
+                <div>
+                    <input style="margin-top: 2%; margin-left: 35%; width: 200px" type="text" class="input" placeholder="Type Name" id="getName">
+                </div>
+                <div style="margin-top: 5%">
+                    <h2 style="margin-top: 5%; margin-left: 30%"> Meeting Days: </h2>
+                </div>
+                <div style="display: flex; flex-direction: row; margin-left: 30%; margin-top: 3% ">
+                    <h4> Monday: </h4>
+                    <input type="checkbox" id="Monday" name="vehicle1" value="M">
+                    <h4 style="margin-left: 10px"> Tuesday: </h4>
+                    <input type="checkbox" id="Tuesday" name="vehicle1" value="T">
+                    <h4 style="margin-left: 10px"> Wednesday: </h4>
+                    <input type="checkbox" id="Wednesday" name="vehicle1" value="W">
+                    <h4 style="margin-left: 10px"> Thursday: </h4>
+                    <input type="checkbox" id="Thursday" name="vehicle1" value="R">
+                    <h4 style="margin-left: 10px"> Friday: </h4>
+                    <input type="checkbox" id="Friday" name="vehicle1" value="F">
+                </div>
+                <div>
+                    <h2 style="margin-top: 5%; margin-left: 30%"> Time Start: </h2>
+                    <input style="margin-top: 2%; margin-left: 35%; width: 200px" type="time" id="startTime" name="time" >
+                </div>
+                
+                <div>
+                    <h2 style="margin-top: 3%; margin-left: 30%"> Time End: </h2>
+                    <input style="margin-top: 2%; margin-left: 35%; width: 200px" type="time" id="endTime" name="time" >
+                </div>
+              
+                <!--<div style="display: flex; flex-direction: row; margin-left: 22%; margin-top: 3%">
+                    <div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <h2 style="margin-top: 10%; margin-left: 40%"> Time end: </h2>
+                        </div>
+                        <div>
+                            <input style="margin-top: 2%; margin-left: 45%; width: 200px" type="time" id="endTIme" name="time">
+                        </div>
+                    </div>
+
+                </div>-->
+                <button style="margin-top: 3%; margin-left: 40%; background-color: #ACD1FF; height: 30px; width: 150px" id="bttn"> + Add to Schedule </button>
+            </div>
+        </main>
+        <script>
+            let timeArr = [""]
+            let mon = false;
+            let tues = false;
+            let wed = false;
+            let thur = false;
+            let frid = false;
+            let w = document.getElementById("Monday");
+            if (w) {
+                w.addEventListener("click", function () {
+                    mon = !mon;
+                    console.log("Monday == ");
+                    console.log(mon);
+                });
+            }
+            let w1 = document.getElementById("Tuesday");
+            if (w1) {
+                w1.addEventListener("click", function () {
+                    tues = !tues;
+                    console.log("Tuesday == ");
+                    console.log(tues);
+                });
+            }
+            let w2 = document.getElementById("Wednesday");
+            if (w2) {
+                w2.addEventListener("click", function () {
+                    wed = !wed;
+                    console.log("Wednesday == ");
+                    console.log(wed);
+                });
+            }
+            let w4 = document.getElementById("Thursday");
+            if (w4) {
+                w4.addEventListener("click", function () {
+                    thur = !thur;
+                    console.log("Thursday == ");
+                    console.log(thur);
+                });
+            }
+            let w5 = document.getElementById("Friday");
+            if (w5) {
+                w5.addEventListener("click", function () {
+                    frid = !frid;
+                    console.log("Friday == ");
+                    console.log(frid);
+                });
+            }
+
+            let bttn = document.getElementById("bttn");
+            if (bttn) {
+                bttn.addEventListener("click", function () {
+                    
+                    let course = document.getElementById("getName");
+                    let myStr = "";
+                    if (course) {
+                       myStr = myStr + "CourseName: " + "[" + course.value + "]" + "\n";
+                    } else { 
+                        alert("Pleae enter Course name");
+                    }
+                    
+                    myStr = myStr + "Meets: " + "[";
+                    if (mon) { 
+                        myStr = myStr + "M,"
+                    }
+                    if (tues) {
+                        myStr = myStr + "T,"
+                    }
+                    if (wed) {
+                        myStr = myStr + "W,"
+                    }
+                    if (thur) {
+                        myStr = myStr + "R,"
+                    }
+                    if (frid) {
+                        myStr = myStr + "F,"
+                    }
+
+                    myStr = myStr + "]\n";
+
+                    let timeStart = document.getElementById("startTime");
+                    let timeEnd = document.getElementById("endTime");
+
+
+                    if (timeStart) { 
+                        let h = timeStart.value;
+                        if (h == '') { 
+                            alert("Please enter meeting time");
+                            return;
+                        }
+                        
+                    }
+                    if (timeEnd) {
+                        let h = timeEnd.value;
+                        if (h == '') {
+                            alert("Please enter meeting time");
+                            return;
+                        }
+
+                    }
+                    if (timeStart && timeEnd) {
+                        let m = timeStart.value;
+                        let hr = "";
+                        let midday = false
+                        let timeStr = "";
+                        let newHr = 0;
+                        for (let i = 0; i < 5; i++) { 
+                            if (i < 2) {
+                                hr = hr + m[i];
+                                console.log(m[i]);
+                            }
+                            else if (i == 2) {
+                                console.log("hour: " + hr);
+                                if (Number(hr) > 12) {
+                                 
+                                    midday = true;
+                                    newHr = Number(hr) - 12;
+                                    timeStr = timeStr + String(newHr) + m[i];
+                                    console.log(timeStr);
+                                }
+                                else { 
+                                    timeStr = timeStr + hr  + m[i];
+                                }
+                                
+
+                            }
+                            else if (i > 2) { 
+                                timeStr = timeStr + m[i];
+                            }
+                        }
+                        if (midday) {
+                            timeStr = timeStr + " PM";
+                        } else {
+                            timeStr = timeStr + " AM";
+                        }
+
+                        //------------------------------
+                        let m1 = timeEnd.value;
+                        let hr1 = "";
+                        let midday1 = false
+                        let timeStr1 = "";
+                        let newHr1 = 0;
+                        for (let i = 0; i < 5; i++) {
+                            if (i < 2) {
+                                hr1 = hr1 + m1[i];
+                                console.log(m1[i]);
+                            }
+                            else if (i == 2) {
+                                console.log("hour: " + hr1);
+                                if (Number(hr1) > 12) {
+
+                                    midday1 = true;
+                                    newHr1 = Number(hr1) - 12;
+                                    timeStr1 = timeStr1 + String(newHr1) + m1[i];
+                                    console.log(timeStr1);
+                                }
+                                else {
+                                    timeStr1 = timeStr1 + hr1 + m1[i];
+                                }
+
+
+                            }
+                            else if (i > 2) {
+                                timeStr1 = timeStr1 + m1[i];
+                            }
+                        }
+                        if (midday1) {
+                            timeStr1 = timeStr1 + " PM";
+                        } else {
+                            timeStr1 = timeStr1 + " AM";
+                        }
+
+
+                        myStr = myStr + "Time: " + "[" + timeStr + " - " + timeStr1 + "]\n";
+                    }
+
+                    console.log(myStr);
+                    let storage = window.localStorage;
+                    let cnt = localStorage.length;
+                    let nameOfItem = "schedule" + String(cnt);
+
+                    storage.setItem(nameOfItem, myStr);
+                    alert("Course added");
+                    window.location.href = "index.html";
+                });
+            }
+            // let sTime = document.getElementById("startTime");
+            // if (sTime) {
+            //     sTime.addEventListener("click", function () {
+            //         console.log("time is:" + sTime.value)
+            //     });
+            // }
+            
+        </script>
+    </div>
+</body>
+
+</html>
