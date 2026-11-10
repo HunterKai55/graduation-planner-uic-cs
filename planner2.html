@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Planner</title>
-    <link rel="stylesheet" href="../css/planner.css">  <!-- changed to planner css || do u want me to keep styles css?-->
+    <link rel="stylesheet" href="css/planner.css">
 </head>
 <body>
     <!-- The Top Bar-->
@@ -40,36 +40,24 @@
         <!-- SIDE END-->
 
         <main>
-            <label class="year-select">
-                <span class="sr-only">Year</span>
-                <select id="year">
-                    <option selected>2026</option>
-                    <option >2027</option>
-                    <option>2028</option>
-                    <option>2029</option>
-                </select>
-            </label>
 
             <section class="semesters">
                 <article class="seme" data-term="Spring">
                     <h2>Spring</h2>
                     <ul class="course-list"><li class="empty">No Classes Listed</li></ul>
-                    <p class="total">Total Credit Hours = <span>0</span></p>
-                    <button class="addBttn" type="button">+ Add Course</button>
+                    <button class="RCBttn" type="button">Search for Courses</button>
+                    <button class="RCBttn" type="button">Save Selection</button>
                 </article>
 
-                <article class="seme" data-term="Summer">
-                    <h2>Summer</h2>
-                    <ul class="course-list"><li class="empty">No Classes Listed</li></ul>
-                    <p class="total">Total Credit Hours = <span>0</span></p>
-                    <button class="addBttn" type="button">+ Add Course</button>
-                </article>
-
-                <article class="seme" data-term="Fall">
-                    <h2>Fall</h2>
-                    <ul class="course-list"><li class="empty">No Classes Listed</li></ul>
-                    <p class="total">Total Credit Hours = <span>0</span></p>
-                    <button class="addBttn" type="button">+ Add Course</button>
+                <article class="RC" data-term="Suggected">
+                    <h2>Suggested Courses</h2>
+                    <h3 class="description"> Gen Eds </h3>
+                    <ul class="course-list"><li class="empty">No reccomendadtion possible</li></ul>
+                    <h3 class="description"> Engineering Courses </h3>
+                    <ul class="course-list"><li class="empty">CS 301
+                    <p> • Machine and Automaton</p>
+                    <button class="RCBttn" type="button">+ Add Course</button>
+                    </li></ul>
                 </article>
             </section>
         </main>

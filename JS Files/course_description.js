@@ -44,6 +44,10 @@ function professorSearch() {
 
             success: function (result) {
 
+                console.log(result.comments);
+                console.log($("#professorComments").length);
+
+
                 //display overall rating
                 $("#overallRating").text(
                     result.professor.avgRating + "/5"
@@ -56,7 +60,7 @@ function professorSearch() {
 
                 //display average difficulty
 
-                ("#difficulty").text(result.professor.avgDifficulty);
+                $("#averageDifficulty").text(result.professor.avgDifficulty);
 
                 // Display comments
                 const comments = $("#professorComments");

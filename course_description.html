@@ -5,21 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses Pages</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/courses.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/courses.css">
 </head>
 <body>
-    <div class="page-container">
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+            <div>
+                <h1>UIC CS</h1>
+                <p>Graduation Tracker</p>
+            </div>
+        </div>
+        <div class="user">
+            <div class="avatar"></div>
+            <div>
+                <strong>Username</strong>
+                <p>B.S. Computer Science • Year</p>
+            </div>
+        </div>
+    </header>
+    <!-- Top Bar End-->
+
+    <div class="layout">
+        <!-- SIDE -->
         <nav class="sidebar">
-            <div class="logo"> Graduation Planner </div>
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="planner.html">My Planner</a>
-                    <a href="about.html">About Us</a>
-                    <a href="courses.html">Courses</a>
-                    <a href="degree_audit.html">Degree Audit</a>
-                </div>
+            <h2>Graduation Track</h2>
+            <a href="index.html">Schedule</a>
+            <a href="planner.html">My Plan</a>
+            <a href="courses.html" class="active">Course Information</a>
+            <a href="degree_audit.html">Degree Audit</a>
+            <hr>
+            <a href="settings.html">Settings</a>
         </nav>
+        <!-- SIDE END-->
 
         <main>
 
