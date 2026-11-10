@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Planner</title>
+    <link rel="stylesheet" href="../css/planner.css">
+</head>
+<body>
+    <!-- The Top Bar-->
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+            <div>
+                <h1>UIC CS</h1>
+                <p>Graduation Tracker</p>
+            </div>
+        </div>
+        <div class="user">
+            <div class="avatar"></div>
+            <div>
+                <strong>Username</strong>
+                <p>B.S. Computer Science • Year</p>
+            </div>
+        </div>
+    </header>
+    <!-- Top Bar End-->
+
+    <div class="layout">
+        <!-- SIDE -->
+        <nav class="sidebar">
+            <h2>Graduation Track</h2>
+            <a href="index.html">Schedule</a>
+            <a href="planner.html" class="active">My Plan</a>
+            <a href="courses.html">Course Information</a>
+            <a href="degree_audit.html">Degree Audit</a>
+            <hr>
+            <a href="settings.html">Settings</a>
+        </nav>
+        <!-- SIDE END-->
+
+        <main>
+
+            <section class="semesters">
+                <article class="seme" data-term="Spring">
+                    <h2>Spring</h2>
+                    <ul class="course-list"><li class="empty">No Classes Listed</li></ul>
+                    <button class="RCBttn" type="button">Search for Courses</button>
+                    <button class="RCBttn" type="button">Save Selection</button>
+                </article>
+
+                <article class="RC" data-term="Suggected">
+                    <h2>Suggested Courses</h2>
+                    <h3 class="description"> Gen Eds </h3>
+                    <ul class="course-list"><li class="empty">No reccomendadtion possible</li></ul>
+                    <h3 class="description"> Engineering Courses </h3>
+                    <ul class="course-list"><li class="empty">CS 301
+                    <p> • Machine and Automaton</p>
+                    <button class="RCBttn" type="button">+ Add Course</button>
+                    </li></ul>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

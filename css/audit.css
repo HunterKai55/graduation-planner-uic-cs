@@ -9,12 +9,18 @@
 }
  
 .content {
-    margin-left: var(--sidebar-width);
+    /* margin-left: var(--sidebar-width); */
     padding: 24px 40px 40px 80px;
     color: #111827;
     font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
 }
  
+.content {
+    flex: 2;
+    min-width: 0;
+    padding: 4px 10px;
+}
+
 .credits-title {
     font-size: 20px;
     font-weight: 700;
