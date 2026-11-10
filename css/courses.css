@@ -124,7 +124,7 @@ p {
 }
 
 .review-card {
-    background-color: var(--chicago-blue);
+    background-color: var(--blue-panel);
     border-radius: 20px;
     border: 8px double #2b4690;
     padding: 10px;
