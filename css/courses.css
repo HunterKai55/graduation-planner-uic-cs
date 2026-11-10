@@ -173,3 +173,9 @@ p {
 .professor-form button:active {
     transform: translateY(0);
 }
+
+#professorRating {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

@@ -55,12 +55,12 @@ function professorSearch() {
 
                 //display would take again percentage
                 $("#takeAgain").text(
-                    Math.round(result.professor.wouldTakeAgainPercent)
+                    String(Math.round(result.professor.wouldTakeAgainPercent)) + "%"
                 );
 
                 //display average difficulty
 
-                $("#averageDifficulty").text(result.professor.avgDifficulty);
+                $("#averageDifficulty").text(result.professor.avgDifficulty + "/5");
 
                 // Display comments
                 const comments = $("#professorComments");
