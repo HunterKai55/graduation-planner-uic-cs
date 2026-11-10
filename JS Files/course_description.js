@@ -33,7 +33,9 @@ function professorSearch() {
 
         // Send request to the backend
         $.ajax({
-            url: "http://localhost:3000/professor",
+            //run locally
+           //url: "http://localhost:3000/professor",
+           url: "https://graduation-planner-uic-cs.onrender.com/professor",
             method: "GET",
 
             data: {
