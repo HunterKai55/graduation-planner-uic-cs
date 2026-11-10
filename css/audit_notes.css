@@ -3,14 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
- 
-:root {
-    --sidebar-width: 250px;
-}
- 
+
 .notes-page {
-    margin-left: var(--sidebar-width);
-    padding: 24px 40px 40px 80px;
+    flex: 1;
+    min-width: 0;
+    padding: 24px 48px 48px 48px;
     color: #111827;
     font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
 }
@@ -88,8 +85,8 @@
 .notes-box {
     display: block;
     width: 100%;
-    max-width: 760px;
-    min-height: 260px;
+    max-width: 1380px;
+    min-height: 480px;
     padding: 16px 20px;
     border: none;
     background: #eff6ff;
