@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --chicago-red: #E4002B;
     --chicago-blue: #41B6E6;
     
@@ -10,9 +10,9 @@
 
 body {
     color: white;
-}
+} */
 
-.sidebar {
+/* .sidebar {
     position: fixed;
     width: 20%;
     height: 100%;
@@ -25,7 +25,77 @@ body {
     align-items: center;
     z-index: 1000;
     flex-direction: column;
+} */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --blue-dark: #1e3a8a;
+    --blue: #2563eb;
+    --blue-panel: #aacfff;
+    --blue-light: #eef5ff;
+    --text: #0f172a;
+    --muted: #64748b;
 }
+
+body {
+    color: var(--text);
+    background: #fff;
+    min-height: 100vh;
+}
+
+.sr-only { position: absolute; left: -9999px; }
+
+/* TOP BAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 28px;
+    background: var(--blue-panel);
+}
+
+
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand-icon {
+    width: 44px; height: 44px;
+    display: grid; place-items: center;
+    background: var(--blue-dark);
+    border-radius: 10px;
+    font-size: 22px;
+}
+.brand h1 { font-size: 22px; }
+.user { display: flex; align-items: center; gap: 12px; text-align: right; }
+.avatar { width: 22px; height: 22px; border-radius: 50%; background: #fff; }
+
+.layout { display: flex; min-height: calc(100vh - 68px); } /*Makes it align*/
+
+
+/*NAV BAR*/
+.sidebar {
+    width: 220px;
+    margin: 8px;
+    padding: 14px;
+    background: #fff;
+    border: 6px solid var(--blue-panel);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.sidebar h2 { font-size: 13px; margin-bottom: 10px; }
+.sidebar a {
+    padding: 10px 12px;
+    font-size: 11px;
+    color: var(--text);
+    text-decoration: none;
+    background: #f3f4f6;
+    border-radius: 8px;
+}
+.sidebar a:hover { background: var(--blue-light); }
+.sidebar a.active { background: var(--blue-light); font-weight: 600; }
+.sidebar hr { border: 0; border-top: 1px solid #e5e7eb; margin: 8px 0; }
+/*NAV BAR END*/
 
 .logo {
     font-size: 3rem;

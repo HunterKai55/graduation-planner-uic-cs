@@ -4,21 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Planner</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/planner.css">  <!-- changed to planner css || do u want me to keep styles css?-->
 </head>
 <body>
-    <nav class="sidebar">
-        <div class="logo"> Graduation Planner </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="planner.html">My Planner</a>
-                <a href="about.html">About Us</a>
-                <a href="courses.html">Courses</a>
-                <a href="degree_audit.html">Degree Audit</a>
+    <!-- The Top Bar-->
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+            <div>
+                <h1>UIC CS</h1>
+                <p>Graduation Tracker</p>
             </div>
-    </nav>
-    <main>
-        <h1> STUFF </h1>
-    </main>
+        </div>
+        <div class="user">
+            <div class="avatar"></div>
+            <div>
+                <strong>Username</strong>
+                <p>B.S. Computer Science • Year</p>
+            </div>
+        </div>
+    </header>
+    <!-- Top Bar End-->
+
+    <div class="layout">
+        <!-- SIDE -->
+        <nav class="sidebar">
+            <h2>Graduation Track</h2>
+            <a href="index.html">Schedule</a>
+            <a href="planner.html" class="active">My Plan</a>
+            <a href="courses.html">Course Information</a>
+            <a href="degree_audit.html">Degree Audit</a>
+            <hr>
+            <a href="settings.html">Settings</a>
+        </nav>
+        <!-- SIDE END-->
+
+        <main>
+            <label class="year-select">
+                <span class="sr-only">Year</span>
+                <select id="year">
+                    <option selected>2026</option>
+                    <option >2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                </select>
+            </label>
+
+            <section class="semesters">
+                <article class="seme" data-term="Spring">
+                    <h2>Spring</h2>
+                    <ul class="course-list"><li class="empty">No Classes Listed</li></ul>
+                    <p class="total">Total Credit Hours = <span>0</span></p>
+                    <button class="addBttn" type="button">+ Add Course</button>
+                </article>
+
+                <article class="seme" data-term="Summer">
+                    <h2>Summer</h2>
+                    <ul class="course-list"><li class="empty">No Classes Listed</li></ul>
+                    <p class="total">Total Credit Hours = <span>0</span></p>
+                    <button class="addBttn" type="button">+ Add Course</button>
+                </article>
+
+                <article class="seme" data-term="Fall">
+                    <h2>Fall</h2>
+                    <ul class="course-list"><li class="empty">No Classes Listed</li></ul>
+                    <p class="total">Total Credit Hours = <span>0</span></p>
+                    <button class="addBttn" type="button">+ Add Course</button>
+                </article>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
