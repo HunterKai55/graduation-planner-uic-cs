@@ -82,6 +82,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    flex-shrink: 0;
 }
 .sidebar h2 { font-size: 13px; margin-bottom: 10px; }
 .sidebar a {

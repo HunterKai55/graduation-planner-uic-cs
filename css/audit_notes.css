@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.notes-page {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 48px 48px 48px;
+    color: #111827;
+    font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+}
+ 
+.notes-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+ 
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #d9d9d9;
+    font-size: 22px;
+    color: #111827;
+    cursor: pointer;
+}
+ 
+.back-btn:hover {
+    background: #c8c8c8;
+}
+ 
+.action-btn {
+    height: 36px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+ 
+.action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+ 
+.save-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+ 
+.save-btn:hover:not(:disabled) {
+    background: #1d4fd8;
+}
+ 
+.delete-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+ 
+.delete-btn:hover:not(:disabled) {
+    background: #fecaca;
+}
+ 
+.notes-status {
+    font-size: 13px;
+    color: #10b981;
+}
+ 
+.notes-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+ 
+.notes-box {
+    display: block;
+    width: 100%;
+    max-width: 1380px;
+    min-height: 480px;
+    padding: 16px 20px;
+    border: none;
+    background: #eff6ff;
+    font-family: inherit;
+    font-size: 16px;
+    color: inherit;
+    resize: vertical;
+}

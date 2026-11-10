@@ -55,16 +55,28 @@ function setUpCourseGrid(courses) {
     console.log("Grid container:", container);
 
     courses.forEach(course => {
-        // const card = document.createElement("div");
-        // card.classList = "panel-body"
-
         container.innerHTML += `
-            <div class="panel-body">
+            <div class="panel-body" data-class='${JSON.stringify(course)}'>
                 <h1>${course.course_code}</h1>
                 <p>${course.course_title}</p>
             </div>
         `;
     });
+
+    container.addEventListener('click', (event) => {
+        let savedCourse = event.target.closest('.panel-body');
+
+        //if it's not a div ignore it
+        if (!savedCourse) return;
+        let courseData = savedCourse.dataset.class;
+
+        //save course data in the session storage
+        sessionStorage.setItem("course", courseData);
+
+        //switch over to the course description page
+        window.location.href = "course_description.html";
+    })
 }
 
 setUpCourseGrid(data);
+

@@ -1,20 +1,20 @@
 /*
     Type Values:                                    |   Sub type values for 11:
-    1  = English                                    |  -1 = Oreintation
-    2  = Math                                       |   0 = Probability
-    3  = Science                                    |   1 = 100 lvl
-    4  = Analyzing the Natural World                |   2 = 200 lvl
-    5  = Understanding the past                     |   3 = 300 lvl
-    6  = Exploring World Cultures                   |   4 = 400 lvl
-    7  = Understanding the Individual and Society   |   5 = Prof. Seminar
-    8  = Understanding U.S Society                  |   6 = Other
-    9  = Understanding the Creative Arts            |   NULL = Not type 11
-    10 = Other Free Electives                       |
+    1  = English                                    |   0  = Probability
+    2  = Math                                       |   1  = 100 lvl
+    3  = Science                                    |   2  = 200 lvl
+    4  = Analyzing the Natural World                |   3  = 300 lvl
+    5  = Understanding the past                     |   4  = 400 lvl
+    6  = Exploring World Cultures                   |   5  = Orientation
+    7  = Understanding the Individual and Society   |   6  = Prof. Seminar
+    8  = Understanding U.S Society                  |   7  = Other
+    9  = Understanding the Creative Arts            |   99 = Not type 11
+    10 = Other Free Electives                       |   
     11 = Computer Science - Required                |
     12 = Computer Science - Tech Elective           |
 */
 const VALID_TYPES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-const VALID_SUBTYPES = [-1, 0, 1, 2, 3, 4, 5, 6];
+const VALID_SUBTYPES = [0, 1, 2, 3, 4, 5, 6, 7, 99];
 const SEC_REQUIRED_HOURS = { 11: 55, 12: 12 };
 const PASSING = ["A", "A-", "B+", "B", "B-", "C+", "C"];
  
@@ -46,6 +46,8 @@ async function loadCourses() {
  
     const all = [...courses.values()];
     checkGenEds(all);
+    checkEngr(all);
+    checkTech(all);
     render(all);
     updateCredits(all);
     updateSectionCounts(all);
@@ -86,14 +88,15 @@ function isValidCourse(c) {
 }
  
 function normalize(c) {
+    const grade = c.grade.trim().toUpperCase();
     return {
         type: c.type,
         subtype: c.subtype,
         courseField: String(c.courseField).trim().toUpperCase(),
         courseNum: String(c.courseNum).trim(),
         courseName: c.courseName.trim(),
-        grade: c.grade.trim().toUpperCase(),
-        hours: c.hours
+        grade: grade,
+        hours: PASSING.includes(grade) ? c.hours : 0
     };
 }
  
@@ -132,14 +135,41 @@ function checkGenEds(courses) {
         totalCount++;
     }
 
-    passingCourses.forEach((c) => {
-        if (c.type != 1 && c.type != 2 && c.type != 3 && c.type != 10 && sumHours(passingCourses, c.type, 3)) {
-            totalCount++;
-        }
+    [4, 5, 6, 7, 8, 9].forEach((n) => {
+        if (sumHours(passingCourses, n, 3)) { totalCount++; }
     });
 
+    const checkMark = document.getElementById("genCheck");
+    if (totalCount < 9) {
+       checkMark.style.visibility = 'hidden';
+    }
+    else {
+        checkMark.style.visibility = 'visible';
+    }
     const counter = document.getElementById("gencount");
     counter.textContent = `${totalCount} / 9`;
+}
+
+function checkEngr(courses) {
+    const passingCourses = courses.filter((c) => PASSING.includes(c.grade) && c.type === 11);
+    const checkMark = document.getElementById("engrCheck");
+    if (sumHours(passingCourses, 11, 55)) {
+        checkMark.style.visibility = 'visible';
+    }
+    else {
+        checkMark.style.visibility = 'hidden';
+    }
+}
+
+function checkTech(courses) {
+    const passingCourses = courses.filter((c) => PASSING.includes(c.grade) && c.type === 12);
+    const checkMark = document.getElementById("techCheck");
+    if (sumHours(passingCourses, 12, 12)) {
+        checkMark.style.visibility = 'visible';
+    }
+    else {
+        checkMark.style.visibility = 'hidden';
+    }
 }
 
 function checkForSpecific(courses, reqClasses) {
@@ -170,11 +200,19 @@ function buildRow(c) {
     grade.textContent = c.grade;
  
     const hours = document.createElement("span");
+    if (!PASSING.includes(c.grade)) {
+        grade.style.color = 'red';
+        name.style.color = 'red';
+        hours.style.color = 'red';
+    }
     hours.textContent = c.hours.toFixed(2);
  
     const notes = document.createElement("button");
     notes.className = "note-btn";
-    notes.textContent = "Add";
+    notes.textContent = localStorage.getItem(`auditNote:${courseKey(c)}`) ? "View" : "Add";
+    notes.addEventListener("click", () => {
+        window.location.href = `audit_notes.html?course=${encodeURIComponent(courseKey(c))}`;
+    });
  
     row.append(name, grade, hours, notes);
     return row;
