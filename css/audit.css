@@ -21,6 +21,15 @@
     padding: 4px 10px;
 }
 
+.topstuff {
+    display: flex;
+    gap: 48px;
+}
+
+.course-button {
+    margin-bottom: 24px;
+}
+
 .credits-title {
     font-size: 20px;
     font-weight: 700;
