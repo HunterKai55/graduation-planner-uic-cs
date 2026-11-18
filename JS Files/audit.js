@@ -16,7 +16,19 @@
 const VALID_TYPES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const VALID_SUBTYPES = [0, 1, 2, 3, 4, 5, 6, 7, 99];
 const SEC_REQUIRED_HOURS = { 11: 55, 12: 12 };
-const PASSING = ["A", "A-", "B+", "B", "B-", "C+", "C"];
+const PASSING = ["A", "B", "C", "S"];
+
+const ADDED_KEY = "auditAddedCourses";
+const REMOVED_KEY = "auditRemovedCourses";
+let jsonCourses = [];
+
+function readList(key) {
+    return JSON.parse(localStorage.getItem(key)) || [];
+}
+
+function writeList(key, list) {
+  localStorage.setItem(key, JSON.stringify(list));
+}
  
 const creditsTitle = document.getElementById("credits-title");
 const progressFill = document.getElementById("progress-fill");
@@ -29,28 +41,88 @@ toggles.forEach((toggle) => {
 });
  
 loadCourses();
+
+const addDialog = document.getElementById("add-dialog");
+const addForm = document.getElementById("add-form");
+const addCategory = document.getElementById("add-category");
+const addSubtypeLabel = document.getElementById("add-subtype-label");
+const addError = document.getElementById("add-error");
+
+document.getElementById("add-button").addEventListener("click", () => {
+  addForm.reset();
+  addSubtypeLabel.hidden = true;
+  addError.textContent = "";
+  addDialog.showModal();
+});
+
+document.getElementById("add-cancel").addEventListener("click", () => addDialog.close());
+
+addCategory.addEventListener("change", () => {
+  addSubtypeLabel.hidden = addCategory.value !== "11";
+});
+
+addForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const data = new FormData(addForm);
+  const type = Number(data.get("category"));
+
+  const raw = {
+    type: type,
+    subtype: type === 11 ? Number(data.get("subtype")) : 99,
+    courseField: data.get("field").trim().toUpperCase(),
+    courseNum: data.get("num").trim(),
+    courseName: data.get("name").trim(),
+    grade: data.get("grade"),
+    hours: Number(data.get("hours"))
+  };
+
+  if (!isValidCourse(raw)) {
+    addError.textContent = "Please check the course details.";
+    return;
+  }
+
+  const key = courseKey(raw);
+  const added = readList(ADDED_KEY).filter((c) => courseKey(c) !== key);
+  added.push(raw);
+  writeList(ADDED_KEY, added);
+
+  addDialog.close();
+  refresh();
+});
+
+function removeCourse(key) {
+  writeList(ADDED_KEY, readList(ADDED_KEY).filter((c) => courseKey(c) !== key));
+
+  const removed = readList(REMOVED_KEY);
+  if (!removed.includes(key)) {
+    removed.push(key);
+    writeList(REMOVED_KEY, removed);
+  }
+
+  localStorage.removeItem("auditNote:" + key);
+  refresh();
+}
  
 async function loadCourses() {
-    const courses = new Map();
-    const response = await fetch("data/audit_classes.json");
-    const data = await response.json();
+    //const response = await fetch("data/audit_classes.json");
+    //const data = await response.json();
+    //jsonCourses = data.coursesTaken;
+    refresh();
+}
 
-    data.coursesTaken.forEach((raw) => {
-        if (!isValidCourse(raw)) {
-            console.warn("Skipped invalid course:", raw);
-            return;
-        }
-        const course = normalize(raw);
-        courses.set(courseKey(course), course);
-    });
- 
-    const all = [...courses.values()];
-    checkGenEds(all);
-    checkEngr(all);
-    checkTech(all);
-    render(all);
-    updateCredits(all);
-    updateSectionCounts(all);
+function refresh() {
+    const removed = readList(REMOVED_KEY);
+    const byKey = new Map();
+    jsonCourses.map(normalize).filter((c) => !removed.includes(courseKey(c))).forEach((c) => byKey.set(courseKey(c), c));
+    readList(ADDED_KEY).map(normalize).forEach((c) => byKey.set(courseKey(c), c));
+    const courses = [...byKey.values()];
+
+    checkGenEds(courses);
+    checkEngr(courses);
+    checkTech(courses);
+    render(courses);
+    updateCredits(courses);
+    updateSectionCounts(courses);
 }
  
 function updateCredits(courses) {
@@ -209,11 +281,24 @@ function buildRow(c) {
  
     const notes = document.createElement("button");
     notes.className = "note-btn";
-    notes.textContent = localStorage.getItem(`auditNote:${courseKey(c)}`) ? "View" : "Add";
+    notes.textContent = localStorage.getItem(`auditNote:${courseKey(c)}`) ? "View Notes" : "Add Notes";
     notes.addEventListener("click", () => {
         window.location.href = `audit_notes.html?course=${encodeURIComponent(courseKey(c))}`;
     });
  
-    row.append(name, grade, hours, notes);
+    const remove = document.createElement("button");
+    remove.className = "remove-btn";
+    remove.textContent = "Remove Course";
+    remove.addEventListener("click", () => {
+        if (confirm(`Remove ${courseKey(c)} from your audit?`)) {
+            removeCourse(courseKey(c));
+        }
+    });
+ 
+    const actions = document.createElement("div");
+    actions.className = "row-actions";
+    actions.append(notes, remove);
+ 
+    row.append(name, grade, hours, actions);
     return row;
 }
