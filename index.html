@@ -109,6 +109,15 @@
                 localStorage.setItem("schedule0", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
                 localStorage.setItem("schedule1", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
             }
+            let y = 1
+            let myArr = [];
+            while (y < cnt){
+                let itemName = "schedule" + String(y+1);
+                myArr[y-1] = localStorage.getItem(itemName)
+                console.log(myArr[y-1]);
+                ++y;
+            }
+            let itemName = "schedule" + String(i+1);
             for (let i = 1; i < cnt - 1; i++) {
                 let itemName = "schedule" + String(i+1);
                 console.log(localStorage.getItem(itemName));
