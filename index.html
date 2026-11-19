@@ -149,7 +149,7 @@
                     para.style.marginLeft = "15px"
                     para.style.marginBottom = "15px"
                     para.style.cursor =  "pointer"
-                    para.addEventListener("click", () => console.log("HI"));
+                    
                     console.log("CourseName: " + courseName);
                     //--------------------------------------------------------------
                     const timeSection = document.createElement("p");
@@ -231,7 +231,10 @@
                         if (w[1][i] == '[')
                             name1 = true;
                     }
-
+                    document.getElementById("mon-DIV").querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("click", function () {
+                            console.log("HELLO");
+                        });
                     
 
                    
