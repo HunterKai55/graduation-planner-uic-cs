@@ -120,6 +120,9 @@
             
             for (let i = 1; i < cnt - 1; i++) {
                 let itemName = "schedule" + String(i+1);
+                if(!(localStorage.getItem(itemName)){
+                    continue;
+                }
                 console.log(localStorage.getItem(itemName));
                 let item = localStorage.getItem(itemName);
                 const para = document.createElement("h2");
