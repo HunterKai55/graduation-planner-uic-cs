@@ -169,6 +169,7 @@
                     timeSection.innerHTML = time;
                     timeSection.style.color = "grey"
                     timeSection.style.marginLeft = "15px"
+                    timeSection.setAttribute("value", "85");
                     
                     console.log("time: " + time);
 
@@ -177,6 +178,8 @@
                     const size4 = w[1].length;
                     let day = "";
                     let name2 = false
+
+                    console.log("\nI AM GETTING"+timeSection.getAttribute("value"))
 
                     for (let i = 1; i < size4; i++) {
                         console.log(w[1][i]);
