@@ -245,6 +245,10 @@
                     r.querySelectorAll("h2").forEach(function (btn) {
                         btn.addEventListener("click", function () {
                             console.log("ID===="+btn.id)
+                            let id = btn.id;
+                            window.localStorage.removeItem(btn.id); 
+                            window.open("index.html");
+
                         });
                     });
                     
