@@ -275,7 +275,13 @@
                     let storage = window.localStorage;
                     let cnt = localStorage.length;
                     let nameOfItem = "schedule" + String(cnt);
-
+                    if(storage.getItem(nameOfItem)){
+                        let ind  = storage.getItem(nameOfItem);
+                        while(ind){
+                            nameOfItem = "schedule" + String(++cnt);
+                            ind  = storage.getItem(nameOfItem);
+                        }
+                    }
                     storage.setItem(nameOfItem, myStr);
                     alert("Course added");
                     window.location.href = "index.html";
