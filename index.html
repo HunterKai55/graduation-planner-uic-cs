@@ -169,22 +169,7 @@
                     timeSection.innerHTML = time;
                     timeSection.style.color = "grey"
                     timeSection.style.marginLeft = "15px"
-                    let hrr = ""
-                    const size7 = w[4].length;
-                    for (let i = 0; i < size7; i++) {
-                        console.log(w[4][i]);
-                        if (w[4][i] == '\n'){
-                            break;
-                        }
-                        hrr = hrr + w[4][i];
-                        // if (w[2][i] == ']')
-                        //     name1 = false;
-                        // if (name1)
-                        //     time = time + w[2][i];
-                        // if (w[2][i] == '[')
-                        //     name1 = true;
-                    }
-                    timeSection.setAttribute("value", hrr);
+                    
                     
                     console.log("time: " + time);
 
@@ -194,7 +179,7 @@
                     let day = "";
                     let name2 = false
 
-                    console.log("\nI AM GETTING"+timeSection.getAttribute("value"))
+                    
 
                     for (let i = 1; i < size4; i++) {
                         console.log(w[1][i]);
