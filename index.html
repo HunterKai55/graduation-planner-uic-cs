@@ -231,8 +231,9 @@
                         if (w[1][i] == '[')
                             name1 = true;
                     }
-                    document.getElementById("mon-DIV").querySelectorAll("h2").forEach(function (btn) {
-                        btn.addEventListener("click", function () {
+                    let r = document.getElementById("mon-DIV");
+                    r.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseover", function () {
                             console.log("HELLO");
                         });
                     };
