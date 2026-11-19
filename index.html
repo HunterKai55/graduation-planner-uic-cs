@@ -231,18 +231,99 @@
                         if (w[1][i] == '[')
                             name1 = true;
                     }
-                    let r = document.getElementById("mon-DIV");
+                    let monH2 = document.getElementById("mon-DIV");
                     r.querySelectorAll("h2").forEach(function (btn) {
                         btn.addEventListener("mouseover", function () {
                             btn.style.color = "red";
                         });
                     });
-                     r.querySelectorAll("h2").forEach(function (btn) {
+                     monH2.querySelectorAll("h2").forEach(function (btn) {
                         btn.addEventListener("mouseout", function () {
                             btn.style.color = "black";
                         });
                     });
-                    r.querySelectorAll("h2").forEach(function (btn) {
+                    monH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("click", function () {
+                            console.log("ID===="+btn.id)
+                            let id = btn.id;
+                            window.localStorage.removeItem(btn.id); 
+                            window.open("index.html");
+
+                        });
+                    });
+
+                    let tuesH2 = document.getElementById("tues-DIV");
+                    tuesH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseover", function () {
+                            btn.style.color = "red";
+                        });
+                    });
+                     tuesH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseout", function () {
+                            btn.style.color = "black";
+                        });
+                    });
+                    tuesH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("click", function () {
+                            console.log("ID===="+btn.id)
+                            let id = btn.id;
+                            window.localStorage.removeItem(btn.id); 
+                            window.open("index.html");
+
+                        });
+                    });
+                    let wedH2 = document.getElementById("wed-DIV");
+                    wedH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseover", function () {
+                            btn.style.color = "red";
+                        });
+                    });
+                     wedH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseout", function () {
+                            btn.style.color = "black";
+                        });
+                    });
+                    wedH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("click", function () {
+                            console.log("ID===="+btn.id)
+                            let id = btn.id;
+                            window.localStorage.removeItem(btn.id); 
+                            window.open("index.html");
+
+                        });
+                    });
+                    let thurH2 = document.getElementById("thur-DIV");
+                    thurH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseover", function () {
+                            btn.style.color = "red";
+                        });
+                    });
+                     thurH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseout", function () {
+                            btn.style.color = "black";
+                        });
+                    });
+                    thurH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("click", function () {
+                            console.log("ID===="+btn.id)
+                            let id = btn.id;
+                            window.localStorage.removeItem(btn.id); 
+                            window.open("index.html");
+
+                        });
+                    });
+                    let fridH2 = document.getElementById("frid-DIV");
+                    fridH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseover", function () {
+                            btn.style.color = "red";
+                        });
+                    });
+                     fridH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseout", function () {
+                            btn.style.color = "black";
+                        });
+                    });
+                    fridH2.querySelectorAll("h2").forEach(function (btn) {
                         btn.addEventListener("click", function () {
                             console.log("ID===="+btn.id)
                             let id = btn.id;
