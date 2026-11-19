@@ -169,7 +169,22 @@
                     timeSection.innerHTML = time;
                     timeSection.style.color = "grey"
                     timeSection.style.marginLeft = "15px"
-                    timeSection.setAttribute("value", hr);
+                    let hrr = ""
+                    const size4 = w[4].length;
+                    for (let i = 0; i < size4; i++) {
+                        console.log(w[4][i]);
+                        if (w[4][i] == '\n'){
+                            break;
+                        }
+                        hrr = hrr + w[4][i];
+                        // if (w[2][i] == ']')
+                        //     name1 = false;
+                        // if (name1)
+                        //     time = time + w[2][i];
+                        // if (w[2][i] == '[')
+                        //     name1 = true;
+                    }
+                    timeSection.setAttribute("value", hrr);
                     
                     console.log("time: " + time);
 
