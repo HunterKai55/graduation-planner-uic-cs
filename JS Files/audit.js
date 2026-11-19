@@ -15,8 +15,20 @@
 */
 const VALID_TYPES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const VALID_SUBTYPES = [0, 1, 2, 3, 4, 5, 6, 7, 99];
-const SEC_REQUIRED_HOURS = { 11: 55, 12: 12 };
+const SEC_REQUIRED_HOURS = { 11: 48, 12: 12 };
 const PASSING = ["A", "B", "C", "S"];
+
+// For chem 122 and 124, additional checks are required, done in the function.
+const SCIENCECOURSES = [
+    "BIOS 110",
+    "BIOS 120",
+    "PHYS 141",
+    "PHYS 142",
+    "EAES 101",
+    "EAES 111",
+    "CHEM 122",
+    "CHEM 124",
+];
 
 const ADDED_KEY = "auditAddedCourses";
 const REMOVED_KEY = "auditRemovedCourses";
@@ -142,7 +154,7 @@ function updateSectionCounts(courses) {
             .filter((c) => c.type === Number(type))
             .reduce((sum, c) => sum + c.hours, 0);
  
-        counter.textContent = `${Number(earned.toFixed(2))} / ${required}`;
+        counter.textContent = `${Number(earned.toFixed(2))} / ${required} Hours`;
     });
 }
  
@@ -207,6 +219,10 @@ function checkGenEds(courses) {
         totalCount++;
     }
 
+    if(checkForScience(passingCourses)) {
+        totalCount++;
+    }
+
     [4, 5, 6, 7, 8, 9].forEach((n) => {
         if (sumHours(passingCourses, n, 3)) { totalCount++; }
     });
@@ -219,13 +235,34 @@ function checkGenEds(courses) {
         checkMark.style.visibility = 'visible';
     }
     const counter = document.getElementById("gencount");
-    counter.textContent = `${totalCount} / 9`;
+    counter.textContent = `${totalCount} / 9 Sections`;
 }
 
 function checkEngr(courses) {
     const passingCourses = courses.filter((c) => PASSING.includes(c.grade) && c.type === 11);
+    const keys = passingCourses.map(courseKey);
+    let engrCount = 0;
+
+    if (keys.includes("ENGR 100") || keys.includes("ENGR 101")) { engrCount++; }
+    if (keys.includes("CS 111") || keys.includes("CS 112") || keys.includes("CS 113")) { engrCount++ }
+    if (keys.includes("CS 141")) { engrCount++; }
+    if (keys.includes("CS 151")) { engrCount++; }
+    if (keys.includes("CS 211")) { engrCount++; }
+    if (keys.includes("CS 251")) { engrCount++; }
+    if (keys.includes("CS 261")) { engrCount++; }
+    if (keys.includes("CS 277")) { engrCount++; }
+    if (keys.includes("CS 301")) { engrCount++; }
+    if (keys.includes("CS 341")) { engrCount++; }
+    if (keys.includes("CS 342")) { engrCount++; }
+    if (keys.includes("CS 361")) { engrCount++; }
+    if (keys.includes("CS 362")) { engrCount++; }
+    if (keys.includes("CS 377")) { engrCount++; }
+    if (keys.includes("CS 401")) { engrCount++; }
+    if (keys.includes("CS 499")) { engrCount++; }
+    if (keys.includes("IE 342") || keys.includes("STAT 381")) { engrCount++; }
+
     const checkMark = document.getElementById("engrCheck");
-    if (sumHours(passingCourses, 11, 55)) {
+    if (sumHours(passingCourses, 11, 48) && engrCount >= 17) {
         checkMark.style.visibility = 'visible';
     }
     else {
@@ -251,6 +288,32 @@ function checkForSpecific(courses, reqClasses) {
 function sumHours(courses, type, req) {
     const filtered = courses.filter((c) => c.type === type);
     return (filtered.reduce((sum, c) => sum + c.hours, 0) >= req);
+}
+
+function checkForScience(courses) {
+    const keys = courses.filter((c) => c.type === 3).map(courseKey);
+    if (keys.length < 2) { return false; }
+
+    let scienceCount = 0;
+    let chemOneFlag = false;
+    let chemTwoFlag = false;
+
+    keys.forEach((key) => {
+        if (key === "CHEM 122") { chemOneFlag = true; }
+        else if (key === "CHEM 124") { chemTwoFlag = true; }
+        else if (SCIENCECOURSES.includes(key)) { scienceCount++; }
+    });
+
+    if (scienceCount >= 2) { return true; }
+
+    if (chemOneFlag && (keys.includes("CHEM 123") || keys.includes("CHEM 116"))) {
+        scienceCount++;
+    }
+    if (chemTwoFlag && (keys.includes("CHEM 125") || keys.includes("CHEM 118"))) {
+        scienceCount++;
+    }
+
+    return scienceCount >= 2;
 }
 
 function buildEmptyNote() {

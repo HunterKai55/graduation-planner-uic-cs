@@ -133,7 +133,7 @@
                 <div class="expmain">
                     <section class="course-section" data-type="11" data-subtype="5">
                         <div class="course-row course-head">
-                            <h4>Engineering Orientation (ENGR 100)</h4>
+                            <h4>Engineering Orientation</h4>
                             <span>Grades</span>
                             <span>Credit Hours</span>
                             <span>Manage Course</span>
@@ -146,22 +146,22 @@
                     </section>
                     <section class="course-section" data-type="11" data-subtype="1">
                         <div class="course-row course-head">
-                            <h4>100 Level (3 Hours Needed)</h4>
+                            <h4>100 Level (3 Courses Needed)</h4>
                         </div>
                     </section>
                     <section class="course-section" data-type="11" data-subtype="2">
                         <div class="course-row course-head">
-                            <h4>200 Level (4 Hours Needed)</h4>
+                            <h4>200 Level (4 Courses Needed)</h4>
                         </div>
                     </section>
                     <section class="course-section" data-type="11" data-subtype="3">
                         <div class="course-row course-head">
-                            <h4>300 Level (6 Hours Needed)</h4>
+                            <h4>300 Level (6 Courses Needed)</h4>
                         </div>
                     </section>
                     <section class="course-section" data-type="11" data-subtype="4">
                         <div class="course-row course-head">
-                            <h4>400 Level (3 Hours Needed)</h4>
+                            <h4>400 Level (CS 401)</h4>
                         </div>
                     </section>
                     <section class="course-section" data-type="11" data-subtype="6">
@@ -238,24 +238,24 @@
             </select>
             </label>
 
-            <label>Department <input name="field" placeholder="CS" required maxlength="6"></label>
-            <label>Course number <input name="num" placeholder="111" required maxlength="5"></label>
+            <div class="smaller-sections">
+                <label>Department <input name="field" placeholder="CS" required maxlength="6"></label>
+                <label>Course number <input name="num" placeholder="111" required maxlength="5"></label>
+            </div>
             <label>Course name <input name="name" placeholder="Program Design I" required></label>
-
-            <label>Grade
-            <select name="grade">
-                <option>A</option><option>B</option><option>C</option><option>D</option><option>F</option>
-                <option>S</option><option>U</option>
-            </select>
-            </label>
-
-            <label>Credit hours <input name="hours" type="number" min="0" max="12" step="1" value="3" required></label>
-
+            <div class="smaller-sections">
+                <label>Grade
+                <select name="grade">
+                    <option>A</option><option>B</option><option>C</option><option>D</option><option>F</option>
+                    <option>S</option><option>U</option>
+                </select>
+                </label>
+                <label>Credit hours <input name="hours" type="number" min="0" max="12" step="1" value="3" required></label>
+            </div>
             <p id="add-error" class="add-error"></p>
-
             <div class="add-actions">
-            <button type="button" id="add-cancel" class="course-button">Cancel</button>
-            <button type="submit" class="course-button">Add</button>
+                <button type="submit" class="course-button">Add</button>
+                <button type="button" id="add-cancel" class="course-button">Cancel</button>
             </div>
         </form>
     </dialog>

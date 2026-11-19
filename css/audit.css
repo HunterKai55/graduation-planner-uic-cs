@@ -206,13 +206,6 @@ html {
     gap: 8px;
 }
 
-.add-dialog {
-  border: none;
-  border-radius: 12px;
-  padding: 24px;
-  width: min(420px, 90vw);
-}
-
 .add-dialog::backdrop {
   background: rgba(0, 0, 0, 0.4);
 }
@@ -240,12 +233,6 @@ html {
   color: #c0392b;
   min-height: 1em;
   margin: 0;
-}
-
-.add-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
 }
  
 .empty-note {
@@ -281,10 +268,30 @@ html {
 }
 
 .add-dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 24px;
+    width: min(420px, 90vw);
     margin: auto;
     font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
 }
 
 .add-dialog label[hidden] {
     display: none;
+}
+
+.add-actions {
+    display: flex;
+    gap: 126px;
+    margin-top: 0;
+}
+
+.smaller-sections {
+    display: flex;
+    gap: 36px;
+}
+
+.smaller-sections label {
+    flex: 1;
+    min-width: 0;
 }
