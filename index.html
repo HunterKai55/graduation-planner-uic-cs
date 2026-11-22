@@ -37,18 +37,22 @@
             <a href="index.html" class="active">Schedule</a>
             <a href="planner.html" >My Plan</a>
             <a href="courses.html">Course Information</a>
-            <a href="degree_audit.html">Degree Audit</a>
+            <a href="degree_audit.html">Degree Progress</a>
             <hr>
             <a href="settings.html">Settings</a>
         </nav>
         <!-- SIDE END-->
 
     <main>
-        <div style="display: flex; flex-direction: row; max-height: 900px; margin-top: 20px">
+        <div style="margin-top: 5px">
+            <button class="addBttn" type="button" style="margin-left: 1150px; width: 126px; height: 25px; border: none; border-radius: 999px; background: #2563eb; font-family: inherit; font-size: 13px; font-weight: 600; color: #ffffff;
+    cursor: pointer">+ Add Class</button>
+        </div>
+        <div style="display: flex; flex-direction: row; max-height: 900px; margin-top: 10px">
             <div style="background-color: whitesmoke; width: 230px; height: 570px; border-radius: 2%;">
                 <h3 style="color: black; text-align: center"> Monday </h3>
-                <div style="background-color: white; margin-left: 10px; height: 370px; width: 210px; border-radius: 2%;">
-
+                <div style="background-color: white; margin-left: 10px; height: 370px; width: 210px; border-radius: 2%;" id="mon-DIV">
+                    
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 210px; border-radius: 5%;">
                     <p style="color: black; margin-left: 3px"> User Annotation</p>
@@ -56,7 +60,7 @@
             </div>
             <div style="background-color: whitesmoke; width: 245px; height: 570px; margin-left: 10px; border-radius: 2%; ">
                 <h3 style="color: black; text-align: center"> Tuesday </h3>
-                <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%;">
+                <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%;" id="tues-DIV">
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;">
@@ -65,7 +69,7 @@
             </div>
             <div style="background-color: whitesmoke; width: 245px; height: 570px; margin-left: 10px; border-radius: 2%; ">
                 <h3 style="color: black; text-align: center"> Wednesday </h3>
-                <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%; ">
+                <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%; " id="wed-DIV">
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;">
@@ -74,7 +78,7 @@
             </div>
             <div style="background-color: whitesmoke; width: 245px; height: 570px; margin-left: 10px; border-radius: 2%; ">
                 <h3 style="color: black; text-align: center"> Thursday </h3>
-                <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%;">
+                <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%;" id="thur-DIV">
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;">
@@ -83,7 +87,7 @@
             </div>
             <div style="background-color: whitesmoke; width: 245px; height: 570px; margin-left: 10px; border-radius: 2%; ">
                 <h3 style="color: black; text-align: center"> Friday </h3>
-                <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%; ">
+                <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%; " id="frid-DIV">
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;">
@@ -92,6 +96,253 @@
             </div>
         </div>
         
+        <script>
+            document.querySelectorAll(".addBttn").forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    window.location.href = "scheduleAddder.html";
+                });
+            });
+            //let storage = window.localStorage;
+            let cnt = localStorage.length;
+            if (cnt < 2) {
+                localStorage.clear()
+                localStorage.setItem("schedule0", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
+                localStorage.setItem("schedule1", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
+            }
+            let y = 1
+            let myArr = [];
+            while (y < cnt){
+                let itemName = "schedule" + String(y+1);
+                myArr[y-1] = localStorage.getItem(itemName)
+                console.log(myArr[y-1]);
+                ++y;
+            }
+            
+            for (let i = 1; i < 20; i++) {
+                let itemName = "schedule" + String(i+1);
+                if(!(localStorage.getItem(itemName))){
+                    continue;
+                }
+                console.log(localStorage.getItem(itemName));
+                let item = localStorage.getItem(itemName);
+                const para = document.createElement("h2");
+                
+                let size = 0;
+                
+                if (item)
+                    size = item.length;
+                    const w = item.split('\n');
+                    const size2 = w[0].length;
+                    let courseName = "";
+                    let name = false
+
+                    for (let i = 0; i < size2; i++) { 
+                        console.log(w[0][i]);
+                       
+                        if (w[0][i] == ']')
+                            name = false;
+                        if (name)
+                            courseName = courseName + w[0][i];
+                        if (w[0][i] == '[')
+                            name = true;
+                    }
+                    console.log(w);
+                    console.log(size);
+                    para.innerHTML = courseName;
+                    para.style.marginLeft = "15px"
+                    para.style.marginBottom = "15px"
+                    para.style.cursor =  "pointer"
+                    
+                    console.log("CourseName: " + courseName);
+                    //--------------------------------------------------------------
+                    const timeSection = document.createElement("p");
+                    const size3 = w[2].length;
+                    let time = "";
+                    let name1 = false
+
+                    for (let i = 0; i < size3; i++) {
+                        console.log(w[2][i]);
+
+                        if (w[2][i] == ']')
+                            name1 = false;
+                        if (name1)
+                            time = time + w[2][i];
+                        if (w[2][i] == '[')
+                            name1 = true;
+                    }
+                    
+                    timeSection.innerHTML = time;
+                    timeSection.style.color = "grey"
+                    timeSection.style.marginLeft = "15px"
+                    
+                    console.log("time: " + time);
+
+                    //-------------------------------------------
+                    //const daySection = document.createElement("p");
+                    const size4 = w[1].length;
+                    let day = "";
+                    let name2 = false
+
+                    timeSection.setAttribute("id", itemName);
+                    para.setAttribute("id", itemName);
+
+                    for (let i = 1; i < size4; i++) {
+                        console.log(w[1][i]);
+                        // if (w[2][i] == ',') { 
+                        //     continue;
+                        // }
+                        if (w[1][i] == ']')
+                            name1 = false;
+                        if (name1)
+                            console.log("checking: " + w[2][i]);
+                            if (w[1][i] == 'M') { 
+                                const ddd = document.getElementById("mon-DIV"); //only one instance of a node exist.. need to duplicate
+                                if (ddd)
+                                    ddd.appendChild(timeSection);//only one instance of a node exist.. need to duplicate
+                                    ddd.appendChild(para.cloneNode(true));
+                                    console.log("MONDAY");
+                            }
+                            if (w[1][i] == 'T') {
+                                const ddd1 = document.getElementById("tues-DIV");
+                                if (ddd1)
+                                    ddd1.appendChild(timeSection.cloneNode(true));
+                                    ddd1.appendChild(para.cloneNode(true));
+                                    console.log("TUESDAY");
+                            }
+                            if (w[1][i] == 'W') {
+                                const ddd2 = document.getElementById("wed-DIV");
+                                if (ddd2)
+                                    ddd2.appendChild(timeSection.cloneNode(true));
+                                    ddd2.appendChild(para.cloneNode(true));
+                                    console.log("WEDNESDAY");
+                                    
+                            }
+                            if (w[1][i] == 'R') {
+                                const ddd3 = document.getElementById("thur-DIV");
+                                if (ddd3)
+                                    ddd3.appendChild(timeSection.cloneNode(true));
+                                    ddd3.appendChild(para.cloneNode(true));
+                                    console.log("Thursday");
+                            }
+                            if (w[1][i] == 'F') {
+                                const ddd4 = document.getElementById("frid-DIV");
+                                if (ddd4)
+                                    ddd4.appendChild(timeSection.cloneNode(true));
+                                    ddd4.appendChild(para.cloneNode(true));
+                                    console.log("FrIDAY");
+                            }
+                        if (w[1][i] == '[')
+                            name1 = true;
+                    }
+                    let monH2 = document.getElementById("mon-DIV");
+                    monH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseover", function () {
+                            btn.style.color = "red";
+                        });
+                    });
+                     monH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseout", function () {
+                            btn.style.color = "black";
+                        });
+                    });
+                    monH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("click", function () {
+                            console.log("ID===="+btn.id)
+                            let id = btn.id;
+                            window.localStorage.removeItem(btn.id); 
+                            window.open("index.html");
+
+                        });
+                    });
+
+                    let tuesH2 = document.getElementById("tues-DIV");
+                    tuesH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseover", function () {
+                            btn.style.color = "red";
+                        });
+                    });
+                     tuesH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseout", function () {
+                            btn.style.color = "black";
+                        });
+                    });
+                    tuesH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("click", function () {
+                            console.log("ID===="+btn.id)
+                            let id = btn.id;
+                            window.localStorage.removeItem(btn.id); 
+                            window.open("index.html");
+
+                        });
+                    });
+                    let wedH2 = document.getElementById("wed-DIV");
+                    wedH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseover", function () {
+                            btn.style.color = "red";
+                        });
+                    });
+                     wedH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseout", function () {
+                            btn.style.color = "black";
+                        });
+                    });
+                    wedH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("click", function () {
+                            console.log("ID===="+btn.id)
+                            let id = btn.id;
+                            window.localStorage.removeItem(btn.id); 
+                            window.open("index.html");
+
+                        });
+                    });
+                    let thurH2 = document.getElementById("thur-DIV");
+                    thurH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseover", function () {
+                            btn.style.color = "red";
+                        });
+                    });
+                     thurH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseout", function () {
+                            btn.style.color = "black";
+                        });
+                    });
+                    thurH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("click", function () {
+                            console.log("ID===="+btn.id)
+                            let id = btn.id;
+                            window.localStorage.removeItem(btn.id); 
+                            window.open("index.html");
+
+                        });
+                    });
+                    let fridH2 = document.getElementById("frid-DIV");
+                    fridH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseover", function () {
+                            btn.style.color = "red";
+                        });
+                    });
+                     fridH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("mouseout", function () {
+                            btn.style.color = "black";
+                        });
+                    });
+                    fridH2.querySelectorAll("h2").forEach(function (btn) {
+                        btn.addEventListener("click", function () {
+                            console.log("ID===="+btn.id)
+                            let id = btn.id;
+                            window.localStorage.removeItem(btn.id); 
+                            window.open("index.html");
+
+                        });
+                    });
+                    
+
+                   
+                        
+            }
+            
+
+        </script>
         
     </main>
     </div>

@@ -34,15 +34,20 @@
             <a href="index.html">Schedule</a>
             <a href="planner.html">My Plan</a>
             <a href="courses.html">Course Information</a>
-            <a href="degree_audit.html" class="active">Degree Audit</a>
+            <a href="degree_audit.html" class="active">Degree Progress</a>
             <hr>
             <a href="settings.html">Settings</a>
         </nav>
         <!-- SIDE END-->
     <main class="content">
-        <h2 class="credits-title" id="credits-title">0/128 Credits</h2>
-        <div class="progress">
-            <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+        <div class="topstuff">
+            <div class="topinfo">
+                <h2 class="credits-title" id="credits-title">0/128 Credits</h2>
+                <div class="progress">
+                    <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+            <button class="course-button" id="add-button">Add Course</button>
         </div>
  
         <div class="audit">
@@ -57,7 +62,7 @@
                             <h4>Academic Writing I and II</h4>
                             <span>Grades</span>
                             <span>Credit Hours</span>
-                            <span>Notes</span>
+                            <span>Manage Course</span>
                         </div>
                     </section>
  
@@ -128,10 +133,10 @@
                 <div class="expmain">
                     <section class="course-section" data-type="11" data-subtype="5">
                         <div class="course-row course-head">
-                            <h4>Engineering Orientation (ENGR 100)</h4>
+                            <h4>Engineering Orientation</h4>
                             <span>Grades</span>
                             <span>Credit Hours</span>
-                            <span>Notes</span>
+                            <span>Manage Course</span>
                         </div>
                     </section>
                     <section class="course-section" data-type="11" data-subtype="0">
@@ -141,22 +146,22 @@
                     </section>
                     <section class="course-section" data-type="11" data-subtype="1">
                         <div class="course-row course-head">
-                            <h4>100 Level (3 Hours Needed)</h4>
+                            <h4>100 Level (3 Courses Needed)</h4>
                         </div>
                     </section>
                     <section class="course-section" data-type="11" data-subtype="2">
                         <div class="course-row course-head">
-                            <h4>200 Level (4 Hours Needed)</h4>
+                            <h4>200 Level (4 Courses Needed)</h4>
                         </div>
                     </section>
                     <section class="course-section" data-type="11" data-subtype="3">
                         <div class="course-row course-head">
-                            <h4>300 Level (6 Hours Needed)</h4>
+                            <h4>300 Level (6 Courses Needed)</h4>
                         </div>
                     </section>
                     <section class="course-section" data-type="11" data-subtype="4">
                         <div class="course-row course-head">
-                            <h4>400 Level (3 Hours Needed)</h4>
+                            <h4>400 Level (CS 401)</h4>
                         </div>
                     </section>
                     <section class="course-section" data-type="11" data-subtype="6">
@@ -187,7 +192,7 @@
                             <h4>Computer Science - Tech Elective</h4>
                             <span>Grades</span>
                             <span>Credit Hours</span>
-                            <span>Notes</span>
+                            <span>Manage Course</span>
                         </div>
                     </section>
                 </div>
@@ -199,6 +204,62 @@
         </div>
     </main>
  
+    <dialog id="add-dialog" class="add-dialog">
+        <form id="add-form">
+            <h2>Add Course</h2>
+
+            <label>Category
+            <select name="category" id="add-category">
+                <option value="1">English</option>
+                <option value="2">Math</option>
+                <option value="3">Science</option>
+                <option value="4">Analyzing the Natural World</option>
+                <option value="5">Understanding the Past</option>
+                <option value="6">Exploring World Cultures</option>
+                <option value="7">Individual and Society</option>
+                <option value="8">U.S. Society</option>
+                <option value="9">Creative Arts</option>
+                <option value="10">Other Free Electives</option>
+                <option value="11">CS Required</option>
+                <option value="12">CS Tech Elective</option>
+            </select>
+            </label>
+
+            <label id="add-subtype-label" hidden>Engineering group
+            <select name="subtype">
+                <option value="5">Orientation</option>
+                <option value="0">Probability</option>
+                <option value="1">100 Level</option>
+                <option value="2">200 Level</option>
+                <option value="3">300 Level</option>
+                <option value="4">400 Level</option>
+                <option value="6">Professional Seminar</option>
+                <option value="7">Other</option>
+            </select>
+            </label>
+
+            <div class="smaller-sections">
+                <label>Department <input name="field" placeholder="CS" required maxlength="6"></label>
+                <label>Course number <input name="num" placeholder="111" required maxlength="5"></label>
+            </div>
+            <label>Course name <input name="name" placeholder="Program Design I" required></label>
+            <div class="smaller-sections">
+                <label>Grade
+                <select name="grade">
+                    <option>A</option><option>B</option><option>C</option><option>D</option><option>F</option>
+                    <option>S</option><option>U</option>
+                </select>
+                </label>
+                <label>Credit hours <input name="hours" type="number" min="0" max="12" step="1" value="3" required></label>
+            </div>
+            <p id="add-error" class="add-error"></p>
+            <div class="add-actions">
+                <button type="submit" class="course-button">Add</button>
+                <button type="button" id="add-cancel" class="course-button">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+
     <script src="JS Files/audit.js" defer></script>
 </div>
 </body>

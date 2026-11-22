@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    overflow-y: scroll;
+}
  
 :root {
     --sidebar-width: 250px;
@@ -19,6 +23,39 @@
     flex: 2;
     min-width: 0;
     padding: 4px 10px;
+}
+
+.topstuff {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+    max-width: 1380px;
+}
+
+.topinfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.course-button {
+    width: 126px;
+    height: 36px;
+    padding: 0;
+    margin-right: 0;
+    margin-top: 12px;
+    border: none;
+    border-radius: 999px;
+    background: #2563eb;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.course-button:hover {
+    background: #1d4fd8;
 }
 
 .credits-title {
@@ -111,7 +148,7 @@
  
 .course-row {
     display: grid;
-    grid-template-columns: 480px 65px 197px 1fr;
+    grid-template-columns: 480px 65px 110px 1fr;
     align-items: center;
     padding: 6px 0;
     font-size: 12px;
@@ -135,18 +172,67 @@
     margin: 0 8px 0 6px;
 }
  
-.note-btn {
-    width: 66px;
+.note-btn,
+.remove-btn {
     height: 20px;
+    padding: 0 12px;
     border: none;
     border-radius: 999px;
-    background: #7fb0ff;
     font-family: inherit;
     font-size: 11px;
     font-weight: 600;
-    color: #111827;
+    white-space: nowrap;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.note-btn {
+    width: 84px;
+    background: #7fb0ff;
+    color: #111827;
+}
+
+.remove-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.remove-btn:hover {
+    background: #fecaca;
+}
+
+.row-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.add-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.add-dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.add-dialog label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.add-dialog input,
+.add-dialog select {
+  padding: 8px;
+  font: inherit;
+}
+
+.add-error {
+  color: #c0392b;
+  min-height: 1em;
+  margin: 0;
 }
  
 .empty-note {
@@ -179,4 +265,33 @@
  
 .expandable.active .toggle {
     transform: rotate(180deg);
+}
+
+.add-dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 24px;
+    width: min(420px, 90vw);
+    margin: auto;
+    font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+}
+
+.add-dialog label[hidden] {
+    display: none;
+}
+
+.add-actions {
+    display: flex;
+    gap: 126px;
+    margin-top: 0;
+}
+
+.smaller-sections {
+    display: flex;
+    gap: 36px;
+}
+
+.smaller-sections label {
+    flex: 1;
+    min-width: 0;
 }
