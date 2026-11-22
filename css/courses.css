@@ -84,13 +84,17 @@ main {
     width: 200px;
     height: 200px;
     border-radius: 20px;
-    border: 8px double var(--blue-dark);
+    border: 4px solid var(--blue-dark);
     font-weight: 700;
     text-align: center;
     font-size: 1rem;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
+}
+
+.panel-body:hover {
+    background-color: var(--blue-light);
 }
 
 .grid-container{
@@ -110,7 +114,7 @@ main {
 .box{
     background-color: var(--blue-panel);
     border-radius: 20px;
-    border: 8px double #2b4690;
+    border: 4px solid #2b4690;
     text-align: center;
 }
 
@@ -126,7 +130,7 @@ p {
 .review-card {
     background-color: var(--blue-panel);
     border-radius: 20px;
-    border: 8px double #2b4690;
+    border: 4px solid #2b4690;
     padding: 10px;
     margin: 10px;
 }
