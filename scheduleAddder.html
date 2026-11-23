@@ -159,12 +159,12 @@
                     const selectEl = document.getElementById('cars');
                     
                     const selectEl = document.getElementById('cars');
-                    const course = selectEl.options[selectEl.selectedIndex].text;
+                    const course = selectEl.options[selectEl.selectedIndex];
                     // console.log("Selected option text:", selectedOption.text);
                     // const course = selectEl.value
                     let myStr = "";
                     if (course) {
-                       myStr = myStr + "CourseName: " + "[" + course.value + "]" + "\n";
+                       myStr = myStr + "CourseName: " + "[" + course.text + "]" + "\n";
                     } else { 
                         alert("Pleae enter Course name");
                     }
