@@ -275,9 +275,11 @@
                         btn.addEventListener("click", function () {
                             console.log("ID===="+btn.id)
                             let id = btn.id;
-                            window.localStorage.removeItem(btn.id); 
-                            window.open("index.html");
-
+                            let cf = confirm("Are you sure you want to remove this from schedule?");
+                            if(cf){
+                                window.localStorage.removeItem(btn.id); 
+                                window.open("index.html");
+                            }
                         });
                     });
                     let wedH2 = document.getElementById("wed-DIV");
@@ -295,8 +297,11 @@
                         btn.addEventListener("click", function () {
                             console.log("ID===="+btn.id)
                             let id = btn.id;
-                            window.localStorage.removeItem(btn.id); 
-                            window.open("index.html");
+                            let cf = confirm("Are you sure you want to remove this from schedule?");
+                            if(cf){
+                                window.localStorage.removeItem(btn.id); 
+                                window.open("index.html");
+                            }
 
                         });
                     });
@@ -315,8 +320,11 @@
                         btn.addEventListener("click", function () {
                             console.log("ID===="+btn.id)
                             let id = btn.id;
-                            window.localStorage.removeItem(btn.id); 
-                            window.open("index.html");
+                            let cf = confirm("Are you sure you want to remove this from schedule?");
+                            if(cf){
+                                window.localStorage.removeItem(btn.id); 
+                                window.open("index.html");
+                            }
 
                         });
                     });
@@ -335,9 +343,11 @@
                         btn.addEventListener("click", function () {
                             console.log("ID===="+btn.id)
                             let id = btn.id;
-                            window.localStorage.removeItem(btn.id); 
-                            window.open("index.html");
-
+                            let cf = confirm("Are you sure you want to remove this from schedule?");
+                            if(cf){
+                                window.localStorage.removeItem(btn.id); 
+                                window.open("index.html");
+                            }
                         });
                     });
                     
