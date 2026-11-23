@@ -157,7 +157,11 @@
                     
                     //let course = document.getElementById("getName");
                     const selectEl = document.getElementById('cars');
-                    const course = selectEl.value
+                    
+                    const selectEl = document.getElementById('cars');
+                    const course = selectEl.options[selectEl.selectedIndex].text;
+                    // console.log("Selected option text:", selectedOption.text);
+                    // const course = selectEl.value
                     let myStr = "";
                     if (course) {
                        myStr = myStr + "CourseName: " + "[" + course.value + "]" + "\n";
