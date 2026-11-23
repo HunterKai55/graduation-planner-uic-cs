@@ -155,7 +155,9 @@
             if (bttn) {
                 bttn.addEventListener("click", function () {
                     
-                    let course = document.getElementById("getName");
+                    //let course = document.getElementById("getName");
+                    const selectEl = document.getElementById('cars');
+                    const course = selectEl.value
                     let myStr = "";
                     if (course) {
                        myStr = myStr + "CourseName: " + "[" + course.value + "]" + "\n";
