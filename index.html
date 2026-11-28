@@ -371,7 +371,7 @@
             let infoT = document.createElement("p");
             let tNote = localStorage.getItem("monNote");
             infoT.innerText = tNote + "+ add Notes";
-            tuesNotes.appendChild(info);
+            tuesNotes.appendChild(infoT);
 
             infoT.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Tuesday:");
@@ -386,7 +386,7 @@
             let infoW = document.createElement("p");
             let wNote = localStorage.getItem("tuesNote");
             infoW.innerText = wNote + "+ add Notes";
-            wedNotes.appendChild(info);
+            wedNotes.appendChild(infoW);
 
             infoW.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Wednesday:");
@@ -401,7 +401,7 @@
             let infoTh = document.createElement("p");
             let thNote = localStorage.getItem("thurNote");
             infoTh.innerText = thNote + "+ add Notes";
-            thurNotes.appendChild(info);
+            thurNotes.appendChild(infoTh);
 
             infoTh.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Thursday:");
@@ -416,7 +416,7 @@
             let infoF = document.createElement("p");
             let fNote = localStorage.getItem("fridNote");
             infoF.innerText = fNote + "+ add Notes";
-            friNotes.appendChild(info);
+            friNotes.appendChild(infoF);
 
             infoF.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Friday:");
