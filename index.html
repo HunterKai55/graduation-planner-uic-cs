@@ -366,11 +366,12 @@
             let mNote = localStorage.getItem("monNote");
             info.innerText = mNote 
             monNotes.appendChild(info);
-            let addBtn = document.createElement("a");
+            let addBtn = document.createElement("button");
             addBtn.innerText = "+ add Notes";
+            addBtn.backgroundColor = "#ACD1FF";
             monNotes.appendChild(addBtn);
 
-            info.addEventListener("click", function(){
+            addBtn.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Monday:");
                 
                 mNote = mNote + "- " + newNote + "\n"
