@@ -398,11 +398,13 @@
 
             addBtn.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Monday:");
+                if(newNote){
+                    mNote = mNote + "- " + newNote + "\n"
+                    console.log(mNote);
+                    localStorage.setItem("monNote", mNote);
+                    info.innerText = mNote
+                }
                 
-                mNote = mNote + "- " + newNote + "\n"
-                console.log(mNote);
-                localStorage.setItem("monNote", mNote);
-                info.innerText = mNote
             });
             
             let tuesNotes = document.getElementById("tues-Notes");
@@ -421,11 +423,13 @@
 
             addBtnT.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Tuesday:");
+                if(newNote){
+                    tNote = tNote + "- " + newNote + "\n"
+                    console.log(tNote);
+                    localStorage.setItem("tuesNote", tNote);
+                    infoT.innerText = tNote
+                }
                 
-                tNote = tNote + "- " + newNote + "\n"
-                console.log(tNote);
-                localStorage.setItem("tuesNote", tNote);
-                infoT.innerText = tNote
             });
 
             let wedNotes = document.getElementById("wed-Notes");
@@ -445,11 +449,13 @@
 
             addBtnW.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Wednesday:");
+                if(newNote){
+                    wNote = wNote + "- " + newNote + "\n"
+                    console.log(wNote);
+                    localStorage.setItem("wedNote", wNote);
+                    infoW.innerText = wNote
+                }
                 
-                wNote = wNote + "- " + newNote + "\n"
-                console.log(wNote);
-                localStorage.setItem("wedNote", wNote);
-                infoW.innerText = wNote
             });
 
             let thurNotes = document.getElementById("thur-Notes");
@@ -468,11 +474,14 @@
 
             addBtnTh.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Thursday:");
+                if (newNote){
+                    thNote = thNote + "- " + newNote + "\n"
+                    console.log(thNote);
+                    localStorage.setItem("thurNote", thNote);
+                    infoTh.innerText = thNote
+
+                }
                 
-                thNote = thNote + "- " + newNote + "\n"
-                console.log(thNote);
-                localStorage.setItem("thurNote", thNote);
-                infoTh.innerText = thNote
             });
 
             let friNotes = document.getElementById("frid-Notes");
@@ -491,11 +500,13 @@
 
             addBtnF.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Friday:");
+                if(newNote){
+                    fNote = fNote + "- " + newNote + "\n"
+                    console.log(fNote);
+                    localStorage.setItem("fridNote", fNote);
+                    infoF.innerText = fNote
+                }
                 
-                fNote = fNote + "- " + newNote + "\n"
-                console.log(fNote);
-                localStorage.setItem("fridNote", fNote);
-                infoF.innerText = fNote
             });
 
             function monClr(){
