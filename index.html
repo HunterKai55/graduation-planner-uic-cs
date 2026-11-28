@@ -65,7 +65,7 @@
                 <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%;" id="tues-DIV">
 
                 </div>
-                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;" id="tues-Notes">
+                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="tues-Notes">
                     <p style="color: black; margin-left: 3px"> User Annotation</p>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%; " id="wed-DIV">
 
                 </div>
-                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;" id="wed-Notes">
+                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="wed-Notes">
                     <p style="color: black; margin-left: 3px"> User Annotation</p>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%;" id="thur-DIV">
 
                 </div>
-                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;" id="thur-Notes">
+                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="thur-Notes">
                     <p style="color: black; margin-left: 3px"> User Annotation</p>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                 <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%; " id="frid-DIV">
 
                 </div>
-                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;" id="frid-Notes">
+                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="frid-Notes">
                     <p style="color: black; margin-left: 3px"> User Annotation</p>
                 </div>
             </div>
@@ -111,6 +111,10 @@
                 localStorage.setItem("schedule0", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
                 localStorage.setItem("schedule1", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
                 localStorage.setItem("monNote", "");
+                localStorage.setItem("teusNote", "");
+                localStorage.setItem("wedNote", "");
+                localStorage.setItem("thurNote", "");
+                localStorage.setItem("fridNote", "");
             }
             let y = 1
             let myArr = [];
@@ -363,13 +367,64 @@
             info.innerText = mNote + "+ add Notes";
             monNotes.appendChild(info);
 
-            info.addEventListener("click", function(){
-                let newNote = prompt("Enter Note to add for monday:");
+            let tuesNotes = document.getElementById("tues-Notes");
+            let infoT = document.createElement("p");
+            let tNote = localStorage.getItem("monNote");
+            infoT.innerText = tNote + "+ add Notes";
+            tuesNotes.appendChild(info);
+
+            infoT.addEventListener("click", function(){
+                let newNote = prompt("Enter Note to add for Tuesday:");
                 
-                mNote = mNote + "- " + newNote + "\n"
-                console.log(mNote);
-                localStorage.setItem("monNote", mNote);
-                info.innerText = mNote + "+ add Notes"
+                tNote = tNote + "- " + newNote + "\n"
+                console.log(tNote);
+                localStorage.setItem("tuesNote", tNote);
+                infoT.innerText = tNote + "+ add Notes"
+            });
+
+            let wedNotes = document.getElementById("wed-Notes");
+            let infoW = document.createElement("p");
+            let wNote = localStorage.getItem("tuesNote");
+            infoW.innerText = wNote + "+ add Notes";
+            wedNotes.appendChild(info);
+
+            infoW.addEventListener("click", function(){
+                let newNote = prompt("Enter Note to add for Wednesday:");
+                
+                wNote = wNote + "- " + newNote + "\n"
+                console.log(wNote);
+                localStorage.setItem("wedNote", wNote);
+                infoW.innerText = wNote + "+ add Notes"
+            });
+
+            let thurNotes = document.getElementById("thur-Notes");
+            let infoTh = document.createElement("p");
+            let thNote = localStorage.getItem("thurNote");
+            infoTh.innerText = thNote + "+ add Notes";
+            thurNotes.appendChild(info);
+
+            infoTh.addEventListener("click", function(){
+                let newNote = prompt("Enter Note to add for Thursday:");
+                
+                thNote = thNote + "- " + newNote + "\n"
+                console.log(thNote);
+                localStorage.setItem("thurNote", thNote);
+                infoTh.innerText = thNote + "+ add Notes"
+            });
+
+            let friNotes = document.getElementById("frid-Notes");
+            let infoF = document.createElement("p");
+            let fNote = localStorage.getItem("fridNote");
+            infoF.innerText = fNote + "+ add Notes";
+            friNotes.appendChild(info);
+
+            infoF.addEventListener("click", function(){
+                let newNote = prompt("Enter Note to add for Friday:");
+                
+                fNote = fNote + "- " + newNote + "\n"
+                console.log(fNote);
+                localStorage.setItem("fridNote", fNote);
+                infoF.innerText = fNote + "+ add Notes"
             });
             
 
