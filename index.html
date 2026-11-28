@@ -55,7 +55,7 @@
                 <div style="background-color: white; margin-left: 10px; height: 370px; width: 210px; border-radius: 2%;" id="mon-DIV">
                     
                 </div>
-                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 210px; border-radius: 5%;">
+                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 210px; border-radius: 5%;" id="mon-Notes">
                     <p style="color: black; margin-left: 3px"> User Annotation</p>
                 </div> 
             </div>
@@ -64,7 +64,7 @@
                 <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%;" id="tues-DIV">
 
                 </div>
-                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;">
+                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;" id="tues-Notes">
                     <p style="color: black; margin-left: 3px"> User Annotation</p>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                 <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%; " id="wed-DIV">
 
                 </div>
-                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;">
+                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;" id="wed-Notes">
                     <p style="color: black; margin-left: 3px"> User Annotation</p>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                 <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%;" id="thur-DIV">
 
                 </div>
-                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;">
+                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;" id="thur-Notes">
                     <p style="color: black; margin-left: 3px"> User Annotation</p>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                 <div style="background-color: white; margin-left: 10px; height: 370px; width: 225px; border-radius: 2%; " id="frid-DIV">
 
                 </div>
-                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;">
+                <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;" id="frid-Notes">
                     <p style="color: black; margin-left: 3px"> User Annotation</p>
                 </div>
             </div>
@@ -351,7 +351,10 @@
                         });
                     });
                     
-
+                let monNotes = document.getElementById("mon-Notes");
+                let info = document.createElement("p");
+                info.innerText = "+ add Notes";
+                monNotes.appendChild(info);
                    
                         
             }
