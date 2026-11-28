@@ -58,8 +58,8 @@
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 210px; border-radius: 5%; display: flex; flex-direction: column; overflow-y: scroll;
 " id="mon-Notes">
                     <div style="display: flex; flex-direction: row;">
-                        <h3 style="color: black; margin-left: 3px; margin-right: 15px"> User Annotation</h3>
-                        <button style="background-color: red"> clear </button>
+                        <h3 style="color: black; margin-left: 3px; margin-right: 25px"> User Annotation</h3>
+                        <button style="background-color: red" onclick="monClr"> clear </button>
 
                     </div>
                     
@@ -71,7 +71,11 @@
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="tues-Notes">
-                    <h3 style="color: black; margin-left: 3px"> User Annotation</h3>
+                    <div style="display: flex; flex-direction: row;">
+                        <h3 style="color: black; margin-left: 3px; margin-right: 25px"> User Annotation</h3>
+                        <button style="background-color: red" onclick="tuesClr"> clear </button>
+
+                    </div>
                 </div>
             </div>
             <div style="background-color: whitesmoke; width: 245px; height: 570px; margin-left: 10px; border-radius: 2%; ">
@@ -80,7 +84,11 @@
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="wed-Notes">
-                    <h3 style="color: black; margin-left: 3px"> User Annotation</h3>
+                    <div style="display: flex; flex-direction: row;">
+                        <h3 style="color: black; margin-left: 3px; margin-right: 25px"> User Annotation</h3>
+                        <button style="background-color: red" onclick="wedClr"> clear </button>
+
+                    </div>
                 </div>
             </div>
             <div style="background-color: whitesmoke; width: 245px; height: 570px; margin-left: 10px; border-radius: 2%; ">
@@ -89,7 +97,11 @@
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="thur-Notes">
-                    <h3 style="color: black; margin-left: 3px"> User Annotation</h3>
+                    <div style="display: flex; flex-direction: row;">
+                        <h3 style="color: black; margin-left: 3px; margin-right: 25px"> User Annotation</h3>
+                        <button style="background-color: red" onclick="thurClr"> clear </button>
+
+                    </div>
                 </div>
             </div>
             <div style="background-color: whitesmoke; width: 245px; height: 570px; margin-left: 10px; border-radius: 2%; ">
@@ -98,7 +110,11 @@
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="frid-Notes">
-                    <h3 style="color: black; margin-left: 3px"> User Annotation</h3>
+                    <div style="display: flex; flex-direction: row;">
+                        <h3 style="color: black; margin-left: 3px; margin-right: 25px"> User Annotation</h3>
+                        <button style="background-color: red" onclick="fridClr"> clear </button>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -394,14 +410,22 @@
             let tNote = localStorage.getItem("tuesNote");
             infoT.innerText = tNote + "+ add Notes";
             tuesNotes.appendChild(infoT);
+            let addBtnT = document.createElement("button");
+            addBtnT.innerText = "+ add Notes";
+            addBtnT.style.backgroundColor = "whitesmoke";
+            addBtnT.style.border =  "none";
+            addBtnT.style.borderRadius =  "999px";
+            addBtnT.style.width = "80%";
+            addBtnT.style.marginLeft = "10%";
+            tuesNotes.appendChild(addBtnT);
 
-            infoT.addEventListener("click", function(){
+            addBtnT.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Tuesday:");
                 
                 tNote = tNote + "- " + newNote + "\n"
                 console.log(tNote);
                 localStorage.setItem("tuesNote", tNote);
-                infoT.innerText = tNote + "+ add Notes"
+                infoT.innerText = tNote
             });
 
             let wedNotes = document.getElementById("wed-Notes");
@@ -409,14 +433,23 @@
             let wNote = localStorage.getItem("wedNote");
             infoW.innerText = wNote + "+ add Notes";
             wedNotes.appendChild(infoW);
+            let addBtnW = document.createElement("button");
+            addBtnW.innerText = "+ add Notes";
+            addBtnW.style.backgroundColor = "whitesmoke";
+            addBtnW.style.border =  "none";
+            addBtnW.style.borderRadius =  "999px";
+            addBtnW.style.width = "80%";
+            addBtnW.style.marginLeft = "10%";
+            wedNotes.appendChild(addBtnW);
+            
 
-            infoW.addEventListener("click", function(){
+            addBtnW.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Wednesday:");
                 
                 wNote = wNote + "- " + newNote + "\n"
                 console.log(wNote);
                 localStorage.setItem("wedNote", wNote);
-                infoW.innerText = wNote + "+ add Notes"
+                infoW.innerText = wNote
             });
 
             let thurNotes = document.getElementById("thur-Notes");
@@ -424,14 +457,22 @@
             let thNote = localStorage.getItem("thurNote");
             infoTh.innerText = thNote + "+ add Notes";
             thurNotes.appendChild(infoTh);
+            let addBtnTh = document.createElement("button");
+            addBtnTh.innerText = "+ add Notes";
+            addBtnTh.style.backgroundColor = "whitesmoke";
+            addBtnTh.style.border =  "none";
+            addBtnTh.style.borderRadius =  "999px";
+            addBtnTh.style.width = "80%";
+            addBtnTh.style.marginLeft = "10%";
+            thurNotes.appendChild(addBtnTh);
 
-            infoTh.addEventListener("click", function(){
+            addBtnTh.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Thursday:");
                 
                 thNote = thNote + "- " + newNote + "\n"
                 console.log(thNote);
                 localStorage.setItem("thurNote", thNote);
-                infoTh.innerText = thNote + "+ add Notes"
+                infoTh.innerText = thNote
             });
 
             let friNotes = document.getElementById("frid-Notes");
@@ -439,14 +480,22 @@
             let fNote = localStorage.getItem("fridNote");
             infoF.innerText = fNote + "+ add Notes";
             friNotes.appendChild(infoF);
+            let addBtnF = document.createElement("button");
+            addBtnF.innerText = "+ add Notes";
+            addBtnF.style.backgroundColor = "whitesmoke";
+            addBtnF.style.border =  "none";
+            addBtnF.style.borderRadius =  "999px";
+            addBtnF.style.width = "80%";
+            addBtnF.style.marginLeft = "10%";
+            friNotes.appendChild(addBtnF);
 
-            infoF.addEventListener("click", function(){
+            addBtnF.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Friday:");
                 
                 fNote = fNote + "- " + newNote + "\n"
                 console.log(fNote);
                 localStorage.setItem("fridNote", fNote);
-                infoF.innerText = fNote + "+ add Notes"
+                infoF.innerText = fNote
             });
             
 
