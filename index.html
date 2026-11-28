@@ -109,6 +109,7 @@
                 localStorage.clear()
                 localStorage.setItem("schedule0", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
                 localStorage.setItem("schedule1", "[placerholder: [name]]\n[placeholder: [name]]\n[placeholder: [12:00 - 12:00]]\n");
+                localStorage.setItem("monNote", "");
             }
             let y = 1
             let myArr = [];
@@ -357,7 +358,8 @@
             }
             let monNotes = document.getElementById("mon-Notes");
             let info = document.createElement("p");
-            info.innerText = "+ add Notes";
+            let mNote = localStorage.getItem("monNote");
+            info.innerText = mNote + "+ add Notes";
             monNotes.appendChild(info);
 
             info.addEventListener("click", function(){
