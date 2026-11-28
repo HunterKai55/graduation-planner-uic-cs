@@ -72,7 +72,7 @@
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="tues-Notes">
                     <div style="display: flex; flex-direction: row;">
-                        <h3 style="color: black; margin-left: 3px; margin-right: 25px"> User Annotation</h3>
+                        <h3 style="color: black; margin-left: 3px; margin-right: 40px"> User Annotation</h3>
                         <button style="background-color: red" onclick="tuesClr"> clear </button>
 
                     </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="wed-Notes">
                     <div style="display: flex; flex-direction: row;">
-                        <h3 style="color: black; margin-left: 3px; margin-right: 25px"> User Annotation</h3>
+                        <h3 style="color: black; margin-left: 3px; margin-right: 40px"> User Annotation</h3>
                         <button style="background-color: red" onclick="wedClr"> clear </button>
 
                     </div>
@@ -98,7 +98,7 @@
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="thur-Notes">
                     <div style="display: flex; flex-direction: row;">
-                        <h3 style="color: black; margin-left: 3px; margin-right: 25px"> User Annotation</h3>
+                        <h3 style="color: black; margin-left: 3px; margin-right: 40px"> User Annotation</h3>
                         <button style="background-color: red" onclick="thurClr"> clear </button>
 
                     </div>
@@ -111,7 +111,7 @@
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="frid-Notes">
                     <div style="display: flex; flex-direction: row;">
-                        <h3 style="color: black; margin-left: 3px; margin-right: 25px"> User Annotation</h3>
+                        <h3 style="color: black; margin-left: 3px; margin-right: 40px"> User Annotation</h3>
                         <button style="background-color: red" onclick="fridClr"> clear </button>
 
                     </div>
@@ -497,7 +497,46 @@
                 localStorage.setItem("fridNote", fNote);
                 infoF.innerText = fNote
             });
-            
+
+            function monClr(){
+                let c = confirm("Are you sure you want to clear your notes for Monday?");
+                if(c){
+                    localStorage.setItem("monNote", "");
+                    info.innerText = localStorage.getItem("monNote");
+                }
+            }
+            function tuesClr(){
+                let c = confirm("Are you sure you want to clear your notes for Tuesday?");
+                if(c){
+                    localStorage.setItem("tuesNote", "");
+                    infoT.innerText = localStorage.getItem("tuesNote");
+                }
+            }
+
+            function wedClr(){
+                let c = confirm("Are you sure you want to clear your notes for Wednesday?");
+                if(c){
+                    localStorage.setItem("wedNote", "");
+                    infoW.innerText = localStorage.getItem("wedNote");
+                }
+            }
+
+
+            function thursClr(){
+                let c = confirm("Are you sure you want to clear your notes for Thursday?");
+                if(c){
+                    localStorage.setItem("thurNote", "");
+                    infoTh.innerText = localStorage.getItem("thurNote");
+                }
+            }
+            function fridClr(){
+                let c = confirm("Are you sure you want to clear your notes for Wednesday?");
+                if(c){
+                    localStorage.setItem("fridNote", "");
+                    infoF.innerText = localStorage.getItem("fridNote");
+                }
+            }
+
 
         </script>
         
