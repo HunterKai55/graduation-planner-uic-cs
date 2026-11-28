@@ -59,7 +59,7 @@
 " id="mon-Notes">
                     <div style="display: flex; flex-direction: row;">
                         <h3 style="color: black; margin-left: 3px; margin-right: 25px"> User Annotation</h3>
-                        <button style="background-color: red" onclick=monClr()> clear </button>
+                        <button style="background-color: red;border: none; border-radius: 999px;" onclick=monClr()> clear </button>
 
                     </div>
                     
@@ -73,7 +73,7 @@
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="tues-Notes">
                     <div style="display: flex; flex-direction: row;">
                         <h3 style="color: black; margin-left: 3px; margin-right: 40px"> User Annotation</h3>
-                        <button style="background-color: red" onclick=tuesClr()> clear </button>
+                        <button style="background-color: red;border: none; border-radius: 999px;" onclick=tuesClr()> clear </button>
 
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="wed-Notes">
                     <div style="display: flex; flex-direction: row;">
                         <h3 style="color: black; margin-left: 3px; margin-right: 40px"> User Annotation</h3>
-                        <button style="background-color: red" onclick=wedClr()> clear </button>
+                        <button style="background-color: red;border: none; border-radius: 999px;" onclick=wedClr()> clear </button>
 
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="thur-Notes">
                     <div style="display: flex; flex-direction: row;">
                         <h3 style="color: black; margin-left: 3px; margin-right: 40px"> User Annotation</h3>
-                        <button style="background-color: red" onclick=thurClr()> clear </button>
+                        <button style="background-color: red;border: none; border-radius: 999px;" onclick=thurClr()> clear </button>
 
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="frid-Notes">
                     <div style="display: flex; flex-direction: row;">
                         <h3 style="color: black; margin-left: 3px; margin-right: 40px"> User Annotation</h3>
-                        <button style="background-color: red" onclick=fridClr()> clear </button>
+                        <button style="background-color: red;border: none; border-radius: 999px;" onclick=fridClr()> clear </button>
 
                     </div>
                 </div>
@@ -408,7 +408,7 @@
             let tuesNotes = document.getElementById("tues-Notes");
             let infoT = document.createElement("p");
             let tNote = localStorage.getItem("tuesNote");
-            infoT.innerText = tNote + "+ add Notes";
+            infoT.innerText = tNote;
             tuesNotes.appendChild(infoT);
             let addBtnT = document.createElement("button");
             addBtnT.innerText = "+ add Notes";
@@ -431,7 +431,7 @@
             let wedNotes = document.getElementById("wed-Notes");
             let infoW = document.createElement("p");
             let wNote = localStorage.getItem("wedNote");
-            infoW.innerText = wNote + "+ add Notes";
+            infoW.innerText = wNote;
             wedNotes.appendChild(infoW);
             let addBtnW = document.createElement("button");
             addBtnW.innerText = "+ add Notes";
@@ -455,7 +455,7 @@
             let thurNotes = document.getElementById("thur-Notes");
             let infoTh = document.createElement("p");
             let thNote = localStorage.getItem("thurNote");
-            infoTh.innerText = thNote + "+ add Notes";
+            infoTh.innerText = thNote;
             thurNotes.appendChild(infoTh);
             let addBtnTh = document.createElement("button");
             addBtnTh.innerText = "+ add Notes";
@@ -478,7 +478,7 @@
             let friNotes = document.getElementById("frid-Notes");
             let infoF = document.createElement("p");
             let fNote = localStorage.getItem("fridNote");
-            infoF.innerText = fNote + "+ add Notes";
+            infoF.innerText = fNote;
             friNotes.appendChild(infoF);
             let addBtnF = document.createElement("button");
             addBtnF.innerText = "+ add Notes";
