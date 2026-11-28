@@ -364,8 +364,11 @@
             let monNotes = document.getElementById("mon-Notes");
             let info = document.createElement("p");
             let mNote = localStorage.getItem("monNote");
-            info.innerText = mNote + "+ add Notes";
+            info.innerText = mNote 
             monNotes.appendChild(info);
+            let addBtn = document.createElement("a");
+            addBtn.innerText = "+ add Notes";
+            monNotes.appendChild(addBtn);
 
             info.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for Monday:");
