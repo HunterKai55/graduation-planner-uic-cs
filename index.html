@@ -364,7 +364,11 @@
 
             info.addEventListener("click", function(){
                 let newNote = prompt("Enter Note to add for monday:");
-                console.log(newNote);
+                
+                mNote = mNote + "- " + newNote + "\n"
+                console.log(mNote);
+                localStorage.setItem("monNote", mNote);
+                info.innerText = mNote + "+ add Notes"
             });
             
 
