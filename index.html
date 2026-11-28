@@ -368,7 +368,7 @@
             monNotes.appendChild(info);
             let addBtn = document.createElement("button");
             addBtn.innerText = "+ add Notes";
-            addBtn.style.backgroundColor = "#ACD1FF";
+            addBtn.style.backgroundColor = "whitesmoke";
             addBtn.style.border =  "none";
             addBtn.style.borderRadius =  "999px";
             monNotes.appendChild(addBtn);
@@ -379,7 +379,7 @@
                 mNote = mNote + "- " + newNote + "\n"
                 console.log(mNote);
                 localStorage.setItem("monNote", mNote);
-                info.innerText = mNote + "+ add Notes"
+                info.innerText = mNote
             });
             
             let tuesNotes = document.getElementById("tues-Notes");
