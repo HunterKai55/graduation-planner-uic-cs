@@ -57,7 +57,7 @@
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 210px; border-radius: 5%; display: flex; flex-direction: column; overflow-y: scroll;
 " id="mon-Notes">
-                    <p style="color: black; margin-left: 3px"> User Annotation</p>
+                    <h3 style="color: black; margin-left: 3px"> User Annotation</h3>
                 </div> 
             </div>
             <div style="background-color: whitesmoke; width: 245px; height: 570px; margin-left: 10px; border-radius: 2%; ">
@@ -66,7 +66,7 @@
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="tues-Notes">
-                    <p style="color: black; margin-left: 3px"> User Annotation</p>
+                    <h3 style="color: black; margin-left: 3px"> User Annotation</h3>
                 </div>
             </div>
             <div style="background-color: whitesmoke; width: 245px; height: 570px; margin-left: 10px; border-radius: 2%; ">
@@ -75,7 +75,7 @@
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="wed-Notes">
-                    <p style="color: black; margin-left: 3px"> User Annotation</p>
+                    <h3 style="color: black; margin-left: 3px"> User Annotation</h3>
                 </div>
             </div>
             <div style="background-color: whitesmoke; width: 245px; height: 570px; margin-left: 10px; border-radius: 2%; ">
@@ -84,7 +84,7 @@
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="thur-Notes">
-                    <p style="color: black; margin-left: 3px"> User Annotation</p>
+                    <h3 style="color: black; margin-left: 3px"> User Annotation</h3>
                 </div>
             </div>
             <div style="background-color: whitesmoke; width: 245px; height: 570px; margin-left: 10px; border-radius: 2%; ">
@@ -93,7 +93,7 @@
 
                 </div>
                 <div style="background-color: #ACD1FF; margin-top: 10px; margin-left: 10px; height: 150px; width: 225px; border-radius: 5%;display: flex; flex-direction: column; overflow-y: scroll;" id="frid-Notes">
-                    <p style="color: black; margin-left: 3px"> User Annotation</p>
+                    <h3 style="color: black; margin-left: 3px"> User Annotation</h3>
                 </div>
             </div>
         </div>
@@ -367,9 +367,18 @@
             info.innerText = mNote + "+ add Notes";
             monNotes.appendChild(info);
 
+            info.addEventListener("click", function(){
+                let newNote = prompt("Enter Note to add for Monday:");
+                
+                mNote = mNote + "- " + newNote + "\n"
+                console.log(mNote);
+                localStorage.setItem("monNote", mNote);
+                info.innerText = mNote + "+ add Notes"
+            });
+            
             let tuesNotes = document.getElementById("tues-Notes");
             let infoT = document.createElement("p");
-            let tNote = localStorage.getItem("monNote");
+            let tNote = localStorage.getItem("tuesNote");
             infoT.innerText = tNote + "+ add Notes";
             tuesNotes.appendChild(infoT);
 
