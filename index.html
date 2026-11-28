@@ -360,6 +360,8 @@
             let info = document.createElement("p");
             let mNote = localStorage.getItem("monNote");
             info.innerText = mNote + "+ add Notes";
+            info.style.display = "flex";
+            info.style.flex-direction = "column";
             monNotes.appendChild(info);
 
             info.addEventListener("click", function(){
